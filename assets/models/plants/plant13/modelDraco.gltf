@@ -1,0 +1,371 @@
+{
+  "accessors": [
+    {
+      "componentType": 5123,
+      "count": 2232,
+      "max": [
+        2231
+      ],
+      "min": [
+        0
+      ],
+      "name": "accessor_indices_0_m0-PolyPaper9_-170378",
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 2232,
+      "max": [
+        0.2670963110877019,
+        0.5581486823512058,
+        0.06967545324096493,
+        1.003921568627451
+      ],
+      "min": [
+        0.25925317383279994,
+        0.5503055450963039,
+        0.061832315986062966,
+        0.996078431372549
+      ],
+      "name": "accessor_color_m0-PolyPaper9_-170378",
+      "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 2232,
+      "max": [
+        0.9903854294117648,
+        0.9334668647058822,
+        1.0026945705882353
+      ],
+      "min": [
+        -1.0038090705882352,
+        -0.9981646705882352,
+        -1.0071406705882353
+      ],
+      "name": "accessor_normal_m0-PolyPaper9_-170378",
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 2232,
+      "max": [
+        0.8915489093795799,
+        1.1252461240351734,
+        1.6368082765999024
+      ],
+      "min": [
+        -0.6306724093795799,
+        0.26718579062042014,
+        0.3627186906204201
+      ],
+      "name": "accessor_position_m0-PolyPaper9_-170378",
+      "type": "VEC3"
+    }
+  ],
+  "asset": {
+    "copyright": "Unknown",
+    "extras": {
+      "GOOGLE_processor_version": 294144208
+    },
+    "generator": "glTF 1-to-2 Upgrader for Google Blocks",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 2699
+    }
+  ],
+  "buffers": [
+    {
+      "name": "modelDraco",
+      "byteLength": 2700,
+      "uri": "data:application/octet-stream;base64,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"
+    }
+  ],
+  "cameras": [
+    {
+      "perspective": {
+        "yfov": 0.7853981633974483,
+        "znear": 0.1000000014901161
+      },
+      "type": "perspective"
+    }
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "color": [
+            1,
+            0.9333333333333333,
+            0.8666666666666667
+          ],
+          "intensity": 0.25,
+          "name": "headLight",
+          "type": "directional"
+        },
+        {
+          "color": [
+            1,
+            0.9333333333333333,
+            0.8666666666666667
+          ],
+          "intensity": 0.324999988079071,
+          "name": "keyLight",
+          "type": "directional"
+        }
+      ]
+    }
+  },
+  "extensionsUsed": [
+    "GOOGLE_backgrounds",
+    "GOOGLE_camera_settings",
+    "KHR_lights_punctual",
+    "KHR_draco_mesh_compression"
+  ],
+  "extras": {
+    "GOOGLE_initial_camera_motion": {
+      "motionPath": "FULL_ROTATION"
+    },
+    "GOOGLE_lighting_rig": {
+      "disableShadows": false
+    }
+  },
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "name": "BlocksPaper",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "mesh_m0-PolyPaper9_-170378",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 1,
+            "NORMAL": 2,
+            "POSITION": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "COLOR_0": 0,
+                "NORMAL": 1,
+                "POSITION": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "node_MeshObject-313353856-PolyPaper9"
+    },
+    {
+      "children": [
+        2
+      ]
+    },
+    {
+      "children": [
+        3
+      ],
+      "extras": {
+        "isTransformNode": 1
+      },
+      "translation": [
+        0.1533200539712819,
+        0.6750779342698907,
+        1.035734902908501
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "children": [
+        0
+      ],
+      "translation": [
+        -0.1533200539712819,
+        -0.6750779342698907,
+        -1.035734902908501
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": 0,
+      "children": [
+        5
+      ],
+      "rotation": [
+        -0.3612285395704208,
+        0.1897792682508776,
+        0.07534642790492982,
+        0.9098465185645047
+      ],
+      "translation": [
+        0.8160907626152039,
+        2.238061189651489,
+        2.555751085281372
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      },
+      "extras": {
+        "isHeadLight": 1
+      },
+      "name": "headLightNode",
+      "translation": [
+        -1.006157339097437,
+        0.5030786695487184,
+        0.5030786695487184
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 1
+        }
+      },
+      "extras": {
+        "isKeyLight": 1
+      },
+      "name": "keyLightNode",
+      "rotation": [
+        -0.7505326882858236,
+        -0.3752663441429118,
+        0,
+        0.5439447166468927
+      ],
+      "scale": [
+        0,
+        0,
+        1.016218912488411
+      ],
+      "translation": [
+        -0.8488770459593935,
+        2.681498945008591,
+        -0.041722730848051
+      ]
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "extensions": {
+        "GOOGLE_backgrounds": {
+          "color": [
+            0.1568627450980392,
+            0.207843137254902,
+            0.5764705882352941
+          ]
+        },
+        "GOOGLE_camera_settings": {}
+      },
+      "extras": {
+        "GOOGLE_camera_index": {
+          "cameraIndex": 0,
+          "nodeIndex": 4
+        },
+        "GOOGLE_geometry_data": {
+          "stats": {
+            "centroid": [
+              0.1673418665290176,
+              0.6490611200317687,
+              0.9744961816403601
+            ],
+            "radius": 1.006157339097437,
+            "stdev": 0.4142933883884373
+          },
+          "visualCenterPoint": [
+            0.1533200539712819,
+            0.6750779342698907,
+            1.035734902908501
+          ]
+        },
+        "GOOGLE_hemi_light": {
+          "groundColor": [
+            0.1568627450980392,
+            0.207843137254902,
+            0.5764705882352941
+          ]
+        }
+      },
+      "name": "defaultScene",
+      "nodes": [
+        1,
+        4,
+        6
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ]
+}

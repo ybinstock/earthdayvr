@@ -1,0 +1,371 @@
+{
+  "accessors": [
+    {
+      "componentType": 5123,
+      "count": 396,
+      "max": [
+        263
+      ],
+      "min": [
+        0
+      ],
+      "name": "accessor_indices_0_m0-PolyPaper11_-92828",
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 264,
+      "max": [
+        0.19500036613613952,
+        0.3120510693274292,
+        0.25168461972007566,
+        1.000870537348822
+      ],
+      "min": [
+        -0.0008705373488220514,
+        0.08832297068016202,
+        0.061036940328046387,
+        0.999129462651178
+      ],
+      "name": "accessor_color_m0-PolyPaper11_-92828",
+      "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 264,
+      "max": [
+        0.9713290019607843,
+        1.007843137254902,
+        0.9713291019607844
+      ],
+      "min": [
+        -0.9737690372549019,
+        -1.007843137254902,
+        -0.9737689372549019
+      ],
+      "name": "accessor_normal_m0-PolyPaper11_-92828",
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 264,
+      "max": [
+        -0.04945648680996578,
+        1.8347495305324866,
+        0.7605379131900343
+      ],
+      "min": [
+        -0.4603680305324866,
+        1.0796304694675134,
+        0.3496263694675134
+      ],
+      "name": "accessor_position_m0-PolyPaper11_-92828",
+      "type": "VEC3"
+    }
+  ],
+  "asset": {
+    "copyright": "Unknown",
+    "extras": {
+      "GOOGLE_processor_version": 294144208
+    },
+    "generator": "glTF 1-to-2 Upgrader for Google Blocks",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 675
+    }
+  ],
+  "buffers": [
+    {
+      "name": "modelDraco",
+      "byteLength": 676,
+      "uri": "data:application/octet-stream;base64,RFJBQ08CAgEBAAAATIQBAn8BACHftq0FaPm2bS1Ay7uu67quXwCtAijl27a1AC3ftq0FaAEBAlBA/wJOU1UZBDFo9T1aL7jivc3AipQICJePEjqlk+tggwMAAAD/AAABAQABAgkEAAACAQAJAwACAgEBCQMAAQMBAQEBA09ZPmw09zQ0J2w0DJ7pqgD3taca3GdTgAAAAAD/AAAAAAAAABartj2ykn09AACAP5FQYz4IAQEBAAwD2A/YNQSJArER5RUBEBc9ajnIibbWN5/nMAM0GdvIbbsb4qvPghScFGExGjhVH+iHU3QMag5FIypHZ3pi4OIqAm9DGkh8mcDa9wAeJghAJusHhBCqiwfSIgDBYwZguTJNxyJmnB6sK2rOEsEDAFA7AcCiqwJAeO0EgFaDBwBCrwgA8J4EAAidzMwdZgTNDwEgcwCQAAA7mR9yDABEIKDkEED1pgDYAQGkdTJHBAEAkozMyVAFYDUGAKIqAHLJAPAdAAB1EtgPAYAdAoBmEgCcAgGws+OhOCgoYLevgO4z8ltLTf5bZei+hrsb+CmyAoPqvIC4IDsQtLYMEL7nAp17eMBgr85tqLALFtXoQGJP7Ks/pLS3OSMDr2UanYCXqjMwrPMKQG36Adr/NAA+psUAxJwCBOgIAAAAAP8HAAAPheu+aT2KP4kysz4yH0E/CwYDAQED/wE1ISkLjQYg////3yB8XQx6UDvz/ZQ0z9w56GEFK+M06uOLE7K1vTYP1yrEGNOWZi14XgBvz3cb08E+V5UB8+Tb4uPp0g8zRe1GXqr/yzPyqFRaPOQdQ8naqYQCMzzAb86q3HM1aRDU83n1btc71/E0vw5eYwjw3ne34WIr5rm6Ve95qzEYv9XnzYf/AAAAfwAAAP8C3F0IAA=="
+    }
+  ],
+  "cameras": [
+    {
+      "perspective": {
+        "yfov": 0.7853981633974483,
+        "znear": 0.1000000014901161
+      },
+      "type": "perspective"
+    }
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "color": [
+            1,
+            0.9333333333333333,
+            0.8666666666666667
+          ],
+          "intensity": 0.25,
+          "name": "headLight",
+          "type": "directional"
+        },
+        {
+          "color": [
+            1,
+            0.9333333333333333,
+            0.8666666666666667
+          ],
+          "intensity": 0.324999988079071,
+          "name": "keyLight",
+          "type": "directional"
+        }
+      ]
+    }
+  },
+  "extensionsUsed": [
+    "GOOGLE_backgrounds",
+    "GOOGLE_camera_settings",
+    "KHR_lights_punctual",
+    "KHR_draco_mesh_compression"
+  ],
+  "extras": {
+    "GOOGLE_initial_camera_motion": {
+      "motionPath": "FULL_ROTATION"
+    },
+    "GOOGLE_lighting_rig": {
+      "disableShadows": false
+    }
+  },
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "name": "BlocksPaper",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "mesh_m0-PolyPaper11_-92828",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 1,
+            "NORMAL": 2,
+            "POSITION": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "COLOR_0": 0,
+                "NORMAL": 1,
+                "POSITION": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "node_MeshObject-402600832-PolyPaper11"
+    },
+    {
+      "children": [
+        2
+      ]
+    },
+    {
+      "children": [
+        3
+      ],
+      "extras": {
+        "isTransformNode": 1
+      },
+      "translation": [
+        -0.2618612088253456,
+        1.413131915895962,
+        0.5568808814883233
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "children": [
+        0
+      ],
+      "translation": [
+        0.2618612088253456,
+        -1.413131915895962,
+        -0.5568808814883233
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": 0,
+      "children": [
+        5
+      ],
+      "rotation": [
+        -0.0167958645730672,
+        -0.0004849462298361385,
+        -0.00000814624074345497,
+        0.9998588218813875
+      ],
+      "translation": [
+        -0.263071209192276,
+        1.456000208854675,
+        1.833499670028687
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      },
+      "extras": {
+        "isHeadLight": 1
+      },
+      "name": "headLightNode",
+      "translation": [
+        -0.4185525366617995,
+        0.2092762683308997,
+        0.2092762683308997
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 1
+        }
+      },
+      "extras": {
+        "isKeyLight": 1
+      },
+      "name": "keyLightNode",
+      "rotation": [
+        -0.7505326882858236,
+        -0.3752663441429118,
+        0,
+        0.5439447166468927
+      ],
+      "scale": [
+        0,
+        0,
+        0.4227380620284175
+      ],
+      "translation": [
+        -0.685809269188717,
+        2.301476293626631,
+        0.1294224052467469
+      ]
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "extensions": {
+        "GOOGLE_backgrounds": {
+          "color": [
+            0.5058823529411764,
+            0.7803921568627451,
+            0.5176470588235295
+          ]
+        },
+        "GOOGLE_camera_settings": {}
+      },
+      "extras": {
+        "GOOGLE_camera_index": {
+          "cameraIndex": 0,
+          "nodeIndex": 4
+        },
+        "GOOGLE_geometry_data": {
+          "stats": {
+            "centroid": [
+              -0.2630712071602995,
+              1.456000169569796,
+              0.5521604672751643
+            ],
+            "radius": 0.4185525366617995,
+            "stdev": 0.2653740444913483
+          },
+          "visualCenterPoint": [
+            -0.2618612088253456,
+            1.413131915895962,
+            0.5568808814883233
+          ]
+        },
+        "GOOGLE_hemi_light": {
+          "groundColor": [
+            0.5058823529411764,
+            0.7803921568627451,
+            0.5176470588235295
+          ]
+        }
+      },
+      "name": "defaultScene",
+      "nodes": [
+        1,
+        4,
+        6
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ]
+}

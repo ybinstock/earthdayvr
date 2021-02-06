@@ -1,0 +1,432 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1715,
+      "max": [
+        2.7094199657440186,
+        3.3552401065826416,
+        23.63640022277832
+      ],
+      "min": [
+        -2.9261000156402588,
+        -2.7232599258422852,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20580,
+      "componentType": 5126,
+      "count": 1715,
+      "max": [
+        0.99996274709701538,
+        0.9999963641166687,
+        0.99985688924789429
+      ],
+      "min": [
+        -0.99993026256561279,
+        -0.99993276596069336,
+        -0.9998963475227356
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1715,
+      "max": [
+        0.9999772310256958,
+        0.99999791383743286,
+        0.99993306398391724,
+        1
+      ],
+      "min": [
+        -0.99987310171127319,
+        -0.99997764825820923,
+        -0.99994152784347534,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1715,
+      "max": [
+        2.5,
+        2.5
+      ],
+      "min": [
+        -1.5,
+        -1.5
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 5553,
+      "max": [
+        1714
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 41160,
+      "componentType": 5126,
+      "count": 2976,
+      "max": [
+        2.6673400402069092,
+        6.8861498832702637,
+        5.0271902084350586
+      ],
+      "min": [
+        -3.6710100173950195,
+        -9.6551599502563477,
+        -3.6705200672149658
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 76872,
+      "componentType": 5126,
+      "count": 2976,
+      "max": [
+        0.99341082572937012,
+        0.99718844890594482,
+        1
+      ],
+      "min": [
+        -0.99906784296035767,
+        -0.99976962804794312,
+        -0.97899740934371948
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 27440,
+      "componentType": 5126,
+      "count": 2976,
+      "max": [
+        0.89433932304382324,
+        1,
+        0.99990576505661011,
+        1
+      ],
+      "min": [
+        -0.99170756340026855,
+        -0.36219796538352966,
+        -0.94653946161270142,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 13720,
+      "componentType": 5126,
+      "count": 2976,
+      "max": [
+        1.0388100147247314,
+        1.0372500419616699
+      ],
+      "min": [
+        -0.037300001829862595,
+        -0.037250000983476639
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 22212,
+      "componentType": 5125,
+      "count": 4464,
+      "max": [
+        2975
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "rhcreations (https://sketchfab.com/rhcreations)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/redwood-tree-2-2c34fb28a756474eb8072a450c8f632b",
+      "title": "Redwood Tree 2"
+    },
+    "generator": "Sketchfab-6.95.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 40068,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 37528,
+      "byteOffset": 40068,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 112584,
+      "byteOffset": 77596,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 75056,
+      "byteOffset": 190180,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 265236,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Redwood_Tree_2_Material_diffuse.jpeg"
+    },
+    {
+      "uri": "textures/Redwood_Tree_2_Material_specularGlossiness.png"
+    },
+    {
+      "uri": "textures/Buddleia_Shrub_Material.001_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 0,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0,
+            0,
+            0
+          ],
+          "specularGlossinessTexture": {
+            "index": 1,
+            "texCoord": 0
+          }
+        }
+      },
+      "name": "Redwood_Tree_2_Material"
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            0.73951981710000003
+          ],
+          "diffuseTexture": {
+            "index": 2,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "name": "Buddleia_Shrub_Material.001"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Redwood Tree 2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Redwood Tree 2 Leaves_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        0.94145999999999996,
+        0,
+        0,
+        0,
+        0,
+        0.94145999999999996,
+        0,
+        0,
+        0,
+        0,
+        1.0639099999999999,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Redwood Tree 2"
+    },
+    {
+      "mesh": 0,
+      "name": "Redwood Tree 2_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        -1.0354199999999998,
+        0.96912000000000009,
+        0.10931,
+        0,
+        0.15914000000000003,
+        0.041090000000000008,
+        0.89519000000000015,
+        0,
+        0.60969000000000018,
+        0.66708000000000012,
+        -0.10885,
+        0,
+        0.014730000000000004,
+        0.11348000000000001,
+        17.988369999999996,
+        1
+      ],
+      "name": "Redwood Tree 2 Leaves"
+    },
+    {
+      "mesh": 1,
+      "name": "Redwood Tree 2 Leaves_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+

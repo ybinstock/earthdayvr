@@ -1,0 +1,550 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 7900,
+      "max": [
+        1.0460699796676636,
+        1.3230500221252441,
+        10.404640197753906
+      ],
+      "min": [
+        -1.6182700395584106,
+        -1.8807899951934814,
+        -0.0013599999947473407
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 94800,
+      "componentType": 5126,
+      "count": 7900,
+      "max": [
+        0.9999660849571228,
+        0.99998420476913452,
+        1
+      ],
+      "min": [
+        -0.99996405839920044,
+        -0.99993562698364258,
+        -0.99999934434890747
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 7900,
+      "max": [
+        1,
+        0.99999481439590454,
+        0.99944883584976196,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -0.99994850158691406,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 7900,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 37824,
+      "max": [
+        7899
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 189600,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        5.3679900169372559,
+        5.6167597770690918,
+        6.1598801612854004
+      ],
+      "min": [
+        -6.5246200561523438,
+        -6.1119999885559082,
+        -6.8441400527954102
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 207456,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        0.99980628490447998,
+        0.99475723505020142,
+        1
+      ],
+      "min": [
+        -0.99856799840927124,
+        -0.99984997510910034,
+        -0.99694794416427612
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 126400,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        0.93066662549972534,
+        1,
+        0.99976968765258789,
+        1
+      ],
+      "min": [
+        -0.96328777074813843,
+        -0.99881064891815186,
+        -0.99265223741531372,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 63200,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        1.0015100240707397,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 151296,
+      "componentType": 5125,
+      "count": 2232,
+      "max": [
+        1487
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 225312,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        4.9464201927185059,
+        4.3519101142883301,
+        5.8249797821044922
+      ],
+      "min": [
+        -5.6878299713134766,
+        -5.0030999183654785,
+        -5.5398697853088379
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 243168,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        0.99881988763809204,
+        0.99718284606933594,
+        1
+      ],
+      "min": [
+        -0.99903297424316406,
+        -0.99943691492080688,
+        -0.98870623111724854
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 150208,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        0.92886072397232056,
+        1,
+        0.99990582466125488,
+        1
+      ],
+      "min": [
+        -0.9847138524055481,
+        -0.9988105297088623,
+        -0.99232494831085205,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 75104,
+      "componentType": 5126,
+      "count": 1488,
+      "max": [
+        1.0015100240707397,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 160224,
+      "componentType": 5125,
+      "count": 2232,
+      "max": [
+        1487
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "rhcreations (https://sketchfab.com/rhcreations)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/giant-redwood-1a2052c58869479eb7b204d5cdc7c63a",
+      "title": "Giant Redwood"
+    },
+    "generator": "Sketchfab-6.76.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 169152,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 87008,
+      "byteOffset": 169152,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 261024,
+      "byteOffset": 256160,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 174016,
+      "byteOffset": 517184,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 691200,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Giant_Sequoia_Redwood_Material_diffuse.png"
+    },
+    {
+      "uri": "textures/Buddleia_Shrub_Material_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 0,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "name": "Giant_Sequoia_Redwood_Material"
+    },
+    {
+      "alphaCutoff": 0.044397865853658534,
+      "alphaMode": "MASK",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 1,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "name": "Buddleia_Shrub_Material"
+    },
+    {
+      "alphaCutoff": 0.86147103658536583,
+      "alphaMode": "MASK",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 1,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "name": "Buddleia_Shrub_Stalks_Material"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Sequioa Redwood_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Redwood Leaves.025_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Redwood Leaves.025_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        -0.62818000000000007,
+        -0.92249999999999999,
+        0,
+        0,
+        0.92249999999999999,
+        -0.62818000000000007,
+        0,
+        0,
+        0,
+        0,
+        1.1160800000000002,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Sequioa Redwood"
+    },
+    {
+      "mesh": 0,
+      "name": "Sequioa Redwood_0"
+    },
+    {
+      "children": [
+        6,
+        7
+      ],
+      "matrix": [
+        -0.0041300000000000009,
+        -0.17834000000000003,
+        -0.52359,
+        0,
+        0.25333,
+        -0.23433000000000001,
+        0.077810000000000004,
+        0,
+        -0.24698000000000003,
+        -0.23929000000000003,
+        0.08345000000000001,
+        0,
+        -0.34691000000000011,
+        -0.23784000000000002,
+        7.4831700000000003,
+        1
+      ],
+      "name": "Redwood Leaves.025"
+    },
+    {
+      "mesh": 1,
+      "name": "Redwood Leaves.025_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Redwood Leaves.025_1"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
+

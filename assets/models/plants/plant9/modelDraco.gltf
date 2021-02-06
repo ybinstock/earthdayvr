@@ -1,0 +1,371 @@
+{
+  "accessors": [
+    {
+      "componentType": 5123,
+      "count": 4272,
+      "max": [
+        2889
+      ],
+      "min": [
+        0
+      ],
+      "name": "accessor_indices_0_m0-PolyPaper11_-425726",
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 2834,
+      "max": [
+        0.26420680027382054,
+        0.5547461759810355,
+        0.251524291056044,
+        1.0010320578135696
+      ],
+      "min": [
+        -0.0010320578135696115,
+        0.31014847416503755,
+        0.06472182679994433,
+        0.9989679421864304
+      ],
+      "name": "accessor_color_m0-PolyPaper11_-425726",
+      "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 2834,
+      "max": [
+        1.006806408627451,
+        0.974453774117647,
+        1.009678874117647
+      ],
+      "min": [
+        -1.006662308627451,
+        -1.007676908627451,
+        -0.972451808627451
+      ],
+      "name": "accessor_normal_m0-PolyPaper11_-425726",
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 2834,
+      "max": [
+        0.6387765281875917,
+        1.6419869192476795,
+        -1.0012238463605274
+      ],
+      "min": [
+        0.15488748075232045,
+        0.8246013807523205,
+        -1.4504069192476794
+      ],
+      "name": "accessor_position_m0-PolyPaper11_-425726",
+      "type": "VEC3"
+    }
+  ],
+  "asset": {
+    "copyright": "Unknown",
+    "extras": {
+      "GOOGLE_processor_version": 294144208
+    },
+    "generator": "glTF 1-to-2 Upgrader for Google Blocks",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 4063
+    }
+  ],
+  "buffers": [
+    {
+      "name": "modelDraco",
+      "byteLength": 4064,
+      "uri": "data:application/octet-stream;base64,RFJBQ08CAgEBAAAC2AWQCwKICx0AAQKAQP8E1FYLgVb4Aay9pr3hfVqHCry2qPxYgB0zU4HoC5+FrWvbF39DLV7+LC7ou5gJFpg/eP1Ph8cuY566pqfsl2s5tAmXPFEh+CMLYeohHdM4bw4UqbVenhUahstpQbKwY0Z2pRqpQ+KajqNDcjqWjll7tyMd2UVAdp+xp/bN+DeTEJALjH7r8fxGLbI6Kx7g89tIa5JK7X0An9GeigqnFWhwmCZG0f4maQzDF3CYTT/fuVBfqcWw9BCq+8QHgJra75S2r1f7jpil9Uh4NiUBsu8naW0S/35Lkn1g8AkThoAM1stoL+CfD9EqF56ve/FRkUMtXv4sLui7mAkWVIwWUehHQAEDBQMBHQEZAQkBAQ9AS7lzaX1OjcLGolnGUIEvAQMFuQIDuQI1OV0BBs1uT6KMmZIBAQIFpQkHKS01CRhWnH2Ko/mAU9keDLTIzASLPsfjSmu3KoGWBAECBTEHB0E3kQEvfMzTu50EDQAt8EEBOYkANfsdg5zUaGbXb93N0FlOBP584x7hhGhlJeP28We4NIbeBAECBLE/B1AGRF7WUQSCEgECBHE8B5EDAzznigMAAAD/AAABAQABAgkEAAACAQAJAwACAgEBCQMAAQMBAQEBA5oB7T8EBJcEBP+3BArj///+ktT9T/t/AAAAAP8AAAAAAAAADlOfPvmphj0AAIA/176GPggBAQEADAPMtLSBAekHAQ1xIi0DEQFcXL4Bin/TDfJzAgnk+Wpa6rP4+gUztwSEPVKFWc2onUTBcna1n1o+cnayVC30afIYKc4sT9n2c3zrE8sAvdXuNeWdfjTBCFJwk7toEKE/357MPFEIijGMg5kmRQB8yb2Hxpox/gOw9tqu1pzwmOvYkGhIza10TUo9ySanSYy/1myh8FMO2sPQy/sFqYxAh8Jb+VvYJQHBxZnZbnwY8tETK3S07wvEhh7hQ+d6wMnoHtQXDY7wXjMR4054waXIU+7vlow4sQULsCrRCXHubeCkirgRHNFIMEVddWIyyCojKl0aEUAfD3zdTvwyUPk+uP/BfSyUfQkd/5wwgb3o0QmWunPux/fgh6AytFrY14BK7AKsVzLFVhpR0emA1tCQaavlxMR/uBNHRHQaqDNUbNZKMXPMCxiBYJMfFnzQwYixlMAIWhbIV6ihoawJ+yg5lFSPMRTBtn6EGg7KmbCPlMMJ9RbBMRYqbXA4BWmLoJxCFL2yAwBXjoIzIVMEvEGDcKtIzBBPxyALfowzIHMEvMOAsAtIxAhPECCrQ/FLBpg8B3NvYT0PDEdCE8I4Ky5meUbmSdiPDvJeY4hatpZAXjZj/MuDNDwStfGV4SotzZqhhgxbWttEyCHGR9VRCgvpivS3oBEdYlTei0cpLGQ2nF8GJL4cYGymEr4QaWKrwV0hh4lYnIPAxI3kw88k6uLHQQ9KGK3WKiBByGML7kBQJWwsgv1CMElTTgD68smGTsEoKfpzwb1zCEfXVuSZw4JgThkFTgDHCerfM8nB2jjNXK0ec0kJSPnLDekfU8m52jrPPAUI/QhDWWm/E3QjRcETtmYRGSTP208Awck4P4gnOTKCrL+QxmHR0PiQR5Ax1wHgSIyNIJFAIIjDjACM/2gFGiznCHAkx8YQxqAPQWKPabVvuAIBlnMJONKjIwii0Ocg0aCAdXKEF6A7wvJk46moVvRzitl0I4/BTbBpPGSb5D1aERRsYhuKU9ZlMloNTxNBFSPB737m17XfhM0z8IRfzFgiRqQLtcq4FCo6dRTMUjQatZNM0d9GxtgR4qsCxy7xwG1T3Hr5gLEaqQBvS53hpkD3xOTHhVzZSEWYU2jNRgfZN9sJ/CTM031MiDmF3ui0eH8BVpmp2KcauDh/hT6KFhtREKcE3RTkkZ9MpEuGqkjaPEBR4Sp1UpBHfnKRLhGopefzAD2Bu9TIQA79SUXaJJiWnE8D9CT0lvoI0J9fuUCbAtNSE2p4noYfayRAd36lIm0STEtN6OF59mnOVjj8t3VuaRv0ZWJ2K2zHuCMUFze1WeH1ZWNr/EVDZ1B5SrP9B2cWsu4FYw2hwO5A5S5Dhr0MqSOzSH0Vhom4za7BpUNo+R0Elfb54EEJIzVLx9udhcoUBpJSxhLGKIcRw7WE88TK3rhiAT7aIQFYNR1OrKTJMS2gIkcwQoYbRAivpMRKtDQhrsjdKT8yw4M7dAivoMRK0yQBslVB8MakaZh3CmyZYxhanhTB2S/mnfgQA3kT4mxrHjfG11RIY9O9DaACAI8qnG/J42b4mgppSL53AVQQ4FGGs+1o5ARh0yHtUh29A6DCAI8qnG/EIwcIow5n6CJ3AGQQ4FEH88145ABfVCLtWN0VvGhNXy7+AwddaUvAlBOijEAEs1wQx5j6i+JYiLNykrSOjIOTOk8UoWyLIr7blsb5KlU96Yp4yIG/G5zsNuZCdDxxrikuh9CdblG0hj+0s2hyWi15vCVTkMooa1G0ZhPEsC8wsh51rGq2B8gl7dAyRx3Mr/AwIlZlkPA1RIXOdIQKvGlxlmWLlqqrAqSHFKs1xSNE5E+Ms6x6xERf1SBNPSV2BCQ84E8JM016zDxfVSCNPS02BCQ83E+JM01qzDRhFSA9xtqOj/CARx3OtScy04RVgnNR1NiPz9CQRyXMNOhR03xVgXR3rNoL0FCQRy3MNedRg4RVh/S0uNqHUCGARyXONiVyQ4RVifStQdwCUIGQVx3MtiNyC4RVi3RT8tIKgAqDfGpQtgmPXGGsKpw93aYMgsO/BU7tHAVGDLTEHca4ph8mp7y6FSAuVWHXPB3abXyOYzz6Bt+DkGMW9optTCP5hbpIRr85sF2YoqdaYhBEEKE6lrjCxl5YoXUJPlz0nIOGnPBPhf4S8XCrEo9AKbjsmAIbxOIKP/oexhpHb2CWI8y4fiRBLlyJ9iXHLzl8v5ecHEnEDdSgytysHXwk2aOC2SS0K8RCFWn8u7TWXIoT+88BtCwD5GFRkHNvWvuiMTLupIQ6GWdY4AIvIqR1QZuyOSbuI8WaZhVS6IEIsIYm1LuxSRbwJIW69hR6mC2osNZBmOICjzKQNwXQOCERNHxFgDXqveAF0JFxRyvKeKCxs4RNmrJMjd6IT5FCR0fEd+CRE3VRqi6Dvt6QTVEjRz/Gt+OQg1VRsG6OwNuSKWLm6IPZ5hRytinKFI5KThuzKUrspsGZVg1ysitKku5LUOSmdI4GPMmRplmHHOhLOqyDMJr4oZMo3EeQtM1J9ARdTiYNrD3EAZ1F4k5qpG/GIZjYci5rMOrIAJyE4V5SqHHE4VfogiZrsYpKMcIGscCXDGl8cehNtqBIGgAAAAD/BwAAYwMfPjgzUz/dmbm/6gtRPwsGAwEBBP8BvRc5EOEGsCAEBP///88EJAEBLQ/HC+t9rovIyDVE2OFdGpDp08Zuni/1+MYn/hxCANkKunB2M2KREYoyDBUCo+sCahi8em6lHXeZ29la9qwwcfscpzT5hXVeF5BX7x9WQQDpXxiJL48xL89jvZmPenI+S3uwabXRgzu7uJ/GI1HDiW56pNYHB/CCIQJLBwzz3EYH7ivJNPqGGD7ZQqw2S4ydBC9B17Q4WhgduIFwFXXoSxvMvRyHp/3rnT7c/pwpgEEdn5Nn0eqsMhyfqZd1MFy/zHE7Ok3Ak94yavijX9pA3W+38Pr5ZpEFQ3SCHfT8wOb62YcGV/LodiGcz58KvGzMVBYmbOtyDLFtREz6iHGPuQQ+lk0hRZ3rU6Gv2Sb9RCCl6gHgLc4bdlL1zBT0snlYJJfkQYQaVLIfWAPBdaRiP0qe3fippIMDm4PcMGlDrs6O6sg5Anx2zJWWQNB+QuW5RpZ4AyucBElETMbGguHES99iC5jeYNhocdEPySrr//0NJv3TO3FryX5fSTNEmMLMRfwQKNUC1+TuPLLz5SxOnb/NL6b6uBEs1aN9y4WAQtzQNlAD8Zzp/sTZAy9AeCFiZ9P5jOiVRKft4gIVI/QIOShO3YuWTeW+e086D7IMHJ48HV3pzxR/YOtoYnebsEdOg1sfkxzQQnvCUkHHoI2I4RWH6YnInZY2f4cb/GqwRTwn0fxxmkc1GXAmsoXJzNGCNII8s4MkkSQqqRGr9ITDi+i9iN7C9gB3Dk5lBAnQvXGP4f++5wYylpzw3V8rVrNTqs0CgaSO1PUZHD2TAiEoPhfS5Os/YyhMpgiMtfp7NM+QYCnJgSJgGSAOGm9fhmDNbFLeksQm+3/9c9uXa5aiHV48VP4dbCiryBMhUA/ey8i8smOz/JCJkiMsvvK7LSZF/4g19yqFMH7a9/jJAeTXCBqxMgs4pZQtRtm3rcfAAc/ei4ZwNSSNn9O9PInAixSs2iCxFeE9wNw2WbHKQShiJ5fh8J9sLEaf4Nw4Rj/R6bXE9/HQRy0DgL10JupV5lUOayjX0r0x3SpEJyxGtT5WgfG89/TL+N3su9wQzRXoU7Lfm0DNUAyQ2PN2yfpPt99CYb+QvMiVz7ofyCkRdgXkRWIkoomXMglXOb/DL40jqQpfl4sfvMQQBsnWhCGEAmPm08Lz+V1eh7Uq1IgnkJZ5CLBahafU5Y5nq0YMnWMtbfzUzKdDe0N+19QGXL58LfNywb2dL48cKk9yYtFxlNnqbAH+PnNsv8lb7BlR6Jzg2liItcG0Vr4cA6wQRbRr6MkgvM7RigcSoco4Z4SJZULFuGUvzz1Y1dkdIMX3GA/9NzOqqeTXtUH99jDMWCAsF4PxM7Zvqv3MGeQw5RDlMOWMqXIHCuBlm/1jEDFG7E3a4gAyuUPdUqImusZdjKOBPAHMqGm1F+dMO7UhoPe93WEirMvQZrDMkdnmw7V7+vzen2lIAvJodKoNCS+cNsEGzMIj6GyLt4ftliiuLoih36z7cTndr8MOlEOM11GzeXtTLQRcXn0Wzvp3N4Ipbp02+raupbxqnXr5bpR5gT+kEFKz05p9VkX8LbDE0GdOrIHlCF7mVTQ0wyOfPT6wXGEGiaRTdKuTaJFGorr5A9BiS3eq6/O9j2d2jWu+4N9/d6z1zBpB/dBdpKcKHtkLbKpCKoSHkB0iXOziRJTzaMJkOO3Uq3cB3SPJOH2fZ9zIwkCFaM1kwU+XT52enio6MaZGq2N9kpz3Mw3g6jBqczpSPP6cd7/gKON5POZwZNYtN0R/mrQbnZ5VorNPZypfeOAWeWxjIkxCjXheBGoBuEgInEDVVwSR7lldBLRlTH7RTXBjNdZ79Sx7JH7iv+o+c1/7QvYPvpa9FYSN2QujuL46fcBEhvga1N7JEqmvk4wdCOxgF4UOUqhX/Gnw8UVl64TiI/mYCIgojhAvC2lcCc5S1Rbpm5syP4QpFLmJ43wXCkxxfd/pjcbg87gn6JSCgv8AAAB/AAAA/wTUSxBBCAA="
+    }
+  ],
+  "cameras": [
+    {
+      "perspective": {
+        "yfov": 0.7853981633974483,
+        "znear": 0.1000000014901161
+      },
+      "type": "perspective"
+    }
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "color": [
+            1,
+            0.9333333333333333,
+            0.8666666666666667
+          ],
+          "intensity": 0.25,
+          "name": "headLight",
+          "type": "directional"
+        },
+        {
+          "color": [
+            1,
+            0.9333333333333333,
+            0.8666666666666667
+          ],
+          "intensity": 0.324999988079071,
+          "name": "keyLight",
+          "type": "directional"
+        }
+      ]
+    }
+  },
+  "extensionsUsed": [
+    "GOOGLE_backgrounds",
+    "GOOGLE_camera_settings",
+    "KHR_lights_punctual",
+    "KHR_draco_mesh_compression"
+  ],
+  "extras": {
+    "GOOGLE_initial_camera_motion": {
+      "motionPath": "FULL_ROTATION"
+    },
+    "GOOGLE_lighting_rig": {
+      "disableShadows": false
+    }
+  },
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "name": "BlocksPaper",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "mesh_m0-PolyPaper11_-425726",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 1,
+            "NORMAL": 2,
+            "POSITION": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "COLOR_0": 0,
+                "NORMAL": 1,
+                "POSITION": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "node_MeshObject-1365324608-PolyPaper11"
+    },
+    {
+      "children": [
+        2
+      ]
+    },
+    {
+      "children": [
+        3
+      ],
+      "extras": {
+        "isTransformNode": 1
+      },
+      "translation": [
+        0.4100869698601095,
+        1.14923319785226,
+        -1.273518555318934
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "children": [
+        0
+      ],
+      "translation": [
+        -0.4100869698601095,
+        -1.14923319785226,
+        1.273518555318934
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": 0,
+      "children": [
+        5
+      ],
+      "rotation": [
+        0.07818361129052358,
+        0.04275872484787224,
+        -0.003356403581202501,
+        0.9960159380903282
+      ],
+      "translation": [
+        0.5190010666847229,
+        0.9481161832809448,
+        -0.006039178930222988
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      },
+      "extras": {
+        "isHeadLight": 1
+      },
+      "name": "headLightNode",
+      "translation": [
+        -0.5733189764334226,
+        0.2866594882167113,
+        0.2866594882167113
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 1
+        }
+      },
+      "extras": {
+        "isKeyLight": 1
+      },
+      "name": "keyLightNode",
+      "rotation": [
+        -0.7505326882858236,
+        -0.3752663441429118,
+        0,
+        0.5439447166468927
+      ],
+      "scale": [
+        0,
+        0,
+        0.5790521661977568
+      ],
+      "translation": [
+        -0.1662706571986632,
+        2.320438011347239,
+        -1.833876581449215
+      ]
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "extensions": {
+        "GOOGLE_backgrounds": {
+          "color": [
+            0.9333333333333333,
+            0.9333333333333333,
+            0.9333333333333333
+          ]
+        },
+        "GOOGLE_camera_settings": {}
+      },
+      "extras": {
+        "GOOGLE_camera_index": {
+          "cameraIndex": 0,
+          "nodeIndex": 4
+        },
+        "GOOGLE_geometry_data": {
+          "stats": {
+            "centroid": [
+              0.4127815089990936,
+              1.162333678951725,
+              -1.254824415251458
+            ],
+            "radius": 0.5733189764334226,
+            "stdev": 0.2628535041177937
+          },
+          "visualCenterPoint": [
+            0.4100869698601095,
+            1.14923319785226,
+            -1.273518555318934
+          ]
+        },
+        "GOOGLE_hemi_light": {
+          "groundColor": [
+            0.9333333333333333,
+            0.9333333333333333,
+            0.9333333333333333
+          ]
+        }
+      },
+      "name": "defaultScene",
+      "nodes": [
+        1,
+        4,
+        6
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ]
+}
