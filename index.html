@@ -4,15 +4,65 @@
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
-
+  <script src="app.js"> </script>
 </head>
 
 <body>
   <!-- <a-scene stats> -->
-  <a-scene gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;">
+  <a-scene gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;"
+    loading-screen="dotsColor: red; backgroundColor: black" fog="type: linear; color: #AAA; density: 0.025">
 
     <a-assets>
-      <video id="SuzanneSimard" autoplay loop="true" src="./assets/videos/earth/SuzanneSimard.mp4"></video>
+
+      <audio id="animalgrowl" src="./assets/audioEffects/animalGrowl.mp3" preload="auto"></audio>
+
+      <!-- earth videos -->
+      <video class="videoAsset" id="AsmeretAsefawBerhe" loop="true"
+        src="./assets/videos/earth/AsmeretAsefawBerhe.mp4"></video>
+      <video class="videoAsset" id="GarthLenz" loop="true" src="./assets/videos/earth/GarthLenz.mp4"></video>
+      <video class="videoAsset" id="JoanneChory" loop="true" src="./assets/videos/earth/JoanneChory.mp4"></video>
+      <video class="videoAsset" id="JonathanDrori" loop="true" src="./assets/videos/earth/JonathanDrori.mp4"></video>
+      <video class="videoAsset" id="KarenLloyd" loop="true" src="./assets/videos/earth/KarenLloyd.mp4"></video>
+      <video class="videoAsset" id="KristieEbi" loop="true" src="./assets/videos/earth/KristieEbi.mp4"></video>
+      <video class="videoAsset" id="SamVanAken" loop="true" src="./assets/videos/earth/SamVanAken.mp4"></video>
+      <video class="videoAsset" id="SuzanneSimard" loop="true" src="./assets/videos/earth/SuzanneSimard.mp4"></video>
+      <video class="videoAsset" id="TassoAzevedo" loop="true" src="./assets/videos/earth/TassoAzevedo.mp4"></video>
+      <video class="videoAsset" id="ThomasCrowther" loop="true" src="./assets/videos/earth/ThomasCrowther.mp4"></video>
+      <video class="videoAsset" id="TobyKiers" loop="true" src="./assets/videos/earth/TobyKiers.mp4"></video>
+
+      <!-- water videos -->
+      <video class="videoAsset" id="AlasdairHarris" loop="true" src="./assets/videos/water/AlasdairHarris.mp4"></video>
+      <video class="videoAsset" id="AndrewForrest" loop="true" src="./assets/videos/water/AndrewForrest.mp4"></video>
+      <video class="videoAsset" id="AngelicqueWhite" loop="true"
+        src="./assets/videos/water/AngelicqueWhite.mp4"></video>
+      <video class="videoAsset" id="AntonioDonatoNobre" loop="true"
+        src="./assets/videos/water/AntonioDonatoNobre.mp4"></video>
+      <video class="videoAsset" id="AyanaElizabethJohnson" loop="true"
+        src="./assets/videos/water/AyanaElizabethJohnson.mp4"></video>
+      <video class="videoAsset" id="EnricSala" loop="true" src="./assets/videos/water/EnricSala.mp4"></video>
+      <video class="videoAsset" id="JeremyJackson" loop="true" src="./assets/videos/water/JeremyJackson.mp4"></video>
+      <video class="videoAsset" id="KateStafford" loop="true" src="./assets/videos/water/KateStafford.mp4"></video>
+      <video class="videoAsset" id="LizHajek" loop="true" src="./assets/videos/water/LizHajek.mp4"></video>
+      <video class="videoAsset" id="NancyRabalais" loop="true" src="./assets/videos/water/NancyRabalais.mp4"></video>
+      <video class="videoAsset" id="RobHarmon" loop="true" src="./assets/videos/water/RobHarmon.mp4"></video>
+      <video class="videoAsset" id="TimFlannery" loop="true" src="./assets/videos/water/TimFlannery.mp4"></video>
+      <video class="videoAsset" id="TrionaMcGrath" loop="true" src="./assets/videos/water/TrionaMcGrath.mp4"></video>
+
+      <!-- air videos -->
+      <video class="videoAsset" id="ArunabhaGhosh" loop="true" src="./assets/videos/air/ArunabhaGhosh.mp4"></video>
+      <video class="videoAsset" id="BasSudmeijer" loop="true" src="./assets/videos/air/BasSudmeijer.mp4"></video>
+      <video class="videoAsset" id="DavidWallaceWells" loop="true"
+        src="./assets/videos/air/DavidWallaceWells.mp4"></video>
+      <video class="videoAsset" id="GavinSchmidt" loop="true" src="./assets/videos/air/GavinSchmidt.mp4"></video>
+      <video class="videoAsset" id="GregAsner" loop="true" src="./assets/videos/air/GregAsner.mp4"></video>
+      <video class="videoAsset" id="MariaNeira" loop="true" src="./assets/videos/air/MariaNeira.mp4"></video>
+      <video class="videoAsset" id="MaryEllenHannibal" loop="true"
+        src="./assets/videos/air/MaryEllenHannibal.mp4"></video>
+      <video class="videoAsset" id="SeanDavis" loop="true" src="./assets/videos/air/SeanDavis.mp4"></video>
+      <video class="videoAsset" id="TimKruger" loop="true" src="./assets/videos/air/TimKruger.mp4"></video>
+      <video class="videoAsset" id="WashingtonWachira" loop="true"
+        src="./assets/videos/air/WashingtonWachira.mp4"></video>
+
       <a-asset-item id="plant1" src="./assets/models/plants/plant1/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant2" src="./assets/models/plants/plant2/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant3" src="./assets/models/plants/plant3/modelDraco.gltf"></a-asset-item>
@@ -28,7 +78,6 @@
       <a-asset-item id="plant13" src="./assets/models/plants/plant13/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant14" src="./assets/models/plants/plant14/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant15" src="./assets/models/plants/plant15/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant16" src="./assets/models/plants/plant16/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant17" src="./assets/models/plants/plant17/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant18" src="./assets/models/plants/plant18/modelDraco.gltf"></a-asset-item>
       <a-asset-item id="plant19" src="./assets/models/plants/plant19/modelDraco.gltf"></a-asset-item>
@@ -63,83 +112,92 @@
 
     </a-assets>
 
-    <!-- <a-entity gltf-model="#plant1" id="plant1Model" position="0 1 0" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant2" id="plant2Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant3" id="plant3Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant4" id="plant4Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant5" id="plant5Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant6" id="plant6Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant7" id="plant7Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant8" id="plant8Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant9" id="plant9Model" shadow="receive: true"></a-entity> -->
-    <!-- <a-entity gltf-model="#plant10" id="plant10Model"  shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant11" id="plant11Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant12" id="plant12Model"  shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant13" id="plant13Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant14" id="plant14Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant15" id="plant15Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant16" id="plant16Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant17" id="plant17Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant18" id="plant18Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant19" id="plant19Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant20" id="plant20Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant21" id="plant21Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant22" id="plant22Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant23" id="plant23Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant24" id="plant24Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant25" id="plant25Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant26" id="plant26Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant27" id="plant27Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant28" id="plant28Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant29" id="plant29Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant30" id="plant30Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant31" id="plant31Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant32" id="plant32Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant33" id="plant33Model" shadow="receive: true"></a-entity>
-    <a-entity gltf-model="#plant34" id="plant34Model" shadow="receive: true"></a-entity> -->
+    <!-- <a-entity gltf-model="#plant1" id="plant1Model" scale="0.4 0.4 0.4" position="0 0 0"> </a-entity>
+    <a-entity gltf-model="#plant2" id="plant2Model" scale="5 5 5" position="0 -6.926 0"></a-entity>
+    <a-entity gltf-model="#plant3" id="plant3Model" scale="5 5 1" position="-0.85696 0.54096 0"></a-entity>
+    <a-entity gltf-model="#plant4" id="plant4Model" scale="2 2 2" position="0 7.88417 0"></a-entity>
+    <a-entity gltf-model="#plant5" id="plant5Model"></a-entity>
+    <a-entity gltf-model="#plant6" id="plant6Model" position="0 0.17511 0" scale="0.3 0.3 0.3"></a-entity>
+    <a-entity gltf-model="#plant7" id="plant7Model" position="0 -5.38285 0" scale="5 5 5"></a-entity>
+    <a-entity gltf-model="#plant8" id="plant8Model" position="0 -2.38605 -5.73962" scale="5 5 5"></a-entity>
+    <a-entity gltf-model="#plant9" id="plant9Model" scale="2 2 1" position="0 -1.67917 2.04216"></a-entity> -->
+    <!-- <a-entity gltf-model="#plant10" id="plant10Model" position="0 -1.69357 0" scale="2 2 2"></a-entity>
+    <a-entity gltf-model="#plant11" id="plant11Model" scale="4 4 4" position="11.0237 3.70267 -12.10088"></a-entity>
+    <a-entity gltf-model="#plant12" id="plant12Model" scale="3 3 3" position="0 -2.84792 1.90193"></a-entity>
+    <a-entity gltf-model="#plant13" id="plant13Model" position="0 -0.32519 -1.20639"></a-entity>
+    <a-entity gltf-model="#plant14" id="plant14Model" position="0 -0.2812 2.15595" scale="2 2 2"></a-entity>
+    <a-entity gltf-model="#plant15" id="plant15Model" position="0 0.88489 0"></a-entity>
+    <a-entity gltf-model="#plant17" id="plant17Model" position="0 -1.89246 0" scale="2 2 2"></a-entity>
+    <a-entity gltf-model="#plant18" id="plant18Model" position="2.24382 -4.91215 0" scale="5 5 5"></a-entity>
+    <a-entity gltf-model="#plant19" id="plant19Model" position="3.15445 -7.79563 0" scale="5 5 5"></a-entity>
+    <a-entity gltf-model="#plant20" id="plant20Model" position="0 -2.28461 0" scale="3 3 5"></a-entity> -->
+    <!-- <a-entity gltf-model="#plant21" id="plant21Model" rotation="0 180 0" position="0 0.4439 0" scale="0.5 0.5 0.5">
+    </a-entity>
+    <a-entity gltf-model="#plant22" id="plant22Model" position="0 -1.05835 11.83172" scale="0.015 0.025 0.025">
+    </a-entity>
+    <a-entity gltf-model="#plant23" id="plant23Model" scale="0.1 0.1 0.1"></a-entity>
+    <a-entity gltf-model="#plant24" id="plant24Model" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#plant25" id="plant25Model" scale="0.25 0.25 0.25"></a-entity>
+    <a-entity gltf-model="#plant26" id="plant26Model"></a-entity>
+    <a-entity gltf-model="#plant27" id="plant27Model" scale="0.5 0.5 0.5"></a-entity>
+    <a-entity gltf-model="#plant28" id="plant28Model" scale="0.3 0.3 0.3"></a-entity>
+    <a-entity gltf-model="#plant29" id="plant29Model" position="0 -0.12083 0" scale="0.03 0.03 0.03"></a-entity>
+    <a-entity gltf-model="#plant30" id="plant30Model" position="0 -2.24333 -4.05499" scale="5 5 5"></a-entity>
+    <a-entity gltf-model="#plant31" id="plant31Model" scale="0.5 0.5 0.5"></a-entity>
+    <a-entity gltf-model="#plant32" id="plant32Model" scale="0.3 0.3 0.3"></a-entity>
+    <a-entity gltf-model="#plant33" id="plant33Model" scale="0.8 0.8 0.8"></a-entity>
+    <a-entity gltf-model="#plant34" id="plant34Model" scale="0.5 0.5 0.5"></a-entity> -->
 
-    <!-- <a-entity gltf-model="#butterfly3" id="butterfly3Model" scale="0.4 0.4 0.4" shadow="receive: true" animation-mixer="clip: *;" position=" ">
-    </a-entity> -->
-    <!-- <a-entity gltf-model="#blue_whale" id="blue_whaleModel" scale="0.05 0.05 0.05" shadow="receive: true"
+    <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#butterfly3" id="butterfly3Model"
+      scale="0.4 0.4 0.4" animation-mixer="clip: *;" position=" ">
+    </a-entity>
+    <!-- <a-entity gltf-model="#blue_whale" id="blue_whaleModel" scale="0.05 0.05 0.05" 
       animation-mixer="clip: *;" position="-1.37916 0.22495 1.20881">
     </a-entity>
-    <a-entity gltf-model="#fish_animated" id="fish_animatedModel" scale="0.001 0.001 0.001" shadow="receive: true"
+    <a-entity gltf-model="#fish_animated" id="fish_animatedModel" scale="0.001 0.001 0.001" 
       animation-mixer="clip: *;" position="-0.25687 0.44571 2.65942">
     </a-entity>
-    <a-entity gltf-model="#frog1" id="frog1Model" scale="0.1 0.1 0.1" shadow="receive: true" animation-mixer="clip: *;"
+    <a-entity gltf-model="#frog1" id="frog1Model" scale="0.1 0.1 0.1"  animation-mixer="clip: *;"
       position="0 0.17549 2.06486">
     </a-entity>
-    <a-entity gltf-model="#frog2" id="frog2Model" scale="0.05 0.05 0.01" shadow="receive: true"
+    <a-entity gltf-model="#frog2" id="frog2Model" scale="0.05 0.05 0.01" 
       animation-mixer="clip: *;" position="0.73112 0 0.9135">
     </a-entity> -->
-    <!-- <a-entity gltf-model="#humpback_whale" id="humpback_whaleModel" scale="0.5 0.5 0.5" shadow="receive: true" animation-mixer="clip: *;"
+    <!-- <a-entity gltf-model="#humpback_whale" id="humpback_whaleModel" scale="0.5 0.5 0.5"  animation-mixer="clip: *;"
       position="-3.60656 0 0">
     </a-entity>
-    <a-entity gltf-model="#killer_whale" id="killer_whaleModel" scale="0.005 0.005 0.005" shadow="receive: true" animation-mixer="clip: *;"
+    <a-entity gltf-model="#killer_whale" id="killer_whaleModel" scale="0.005 0.005 0.005"  animation-mixer="clip: *;"
       position="2.61504 0 4.96801">
     </a-entity>
-    <a-entity gltf-model="#bird1" id="bird1Model" scale="0.1 0.1 0.1" shadow="receive: true" animation-mixer="clip: *;" position="1.3109 0 3.44231">
+    <a-entity gltf-model="#bird1" id="bird1Model" scale="0.1 0.1 0.1"  animation-mixer="clip: *;" position="1.3109 0 3.44231">
     </a-entity>
-    <a-entity gltf-model="#bird2" id="bird2Model" scale="0.7 0.7 0.7" shadow="receive: true" animation-mixer="clip: *;" position="0 0 3.21444">
+    <a-entity gltf-model="#bird2" id="bird2Model" scale="0.7 0.7 0.7"  animation-mixer="clip: *;" position="0 0 3.21444">
     </a-entity>
-    <a-entity gltf-model="#sea_turtle" id="sea_turtleModel" rotation="0 180 0" scale="0.01 0.01 0.01" shadow="receive: true" animation-mixer="clip: *;"
+    <a-entity gltf-model="#sea_turtle" id="sea_turtleModel" rotation="0 180 0" scale="0.01 0.01 0.01"  animation-mixer="clip: *;"
       position="0.7816 0.59004 1.4469">
     </a-entity>
-    <a-entity gltf-model="#snake" id="snakeModel" scale="0.05 0.05 0.05" shadow="receive: true" animation-mixer="clip: *;" position="-1.6201 0 2.07671">
+    <a-entity gltf-model="#snake" id="snakeModel" scale="0.05 0.05 0.05"  animation-mixer="clip: *;" position="-1.6201 0 2.07671">
     </a-entity>
-    <a-entity gltf-model="#whale" id="whaleModel" rotation="0 90 0" shadow="receive: true" animation-mixer="clip: *;" position="-4.66107 0 1.63033">
+    <a-entity gltf-model="#whale" id="whaleModel" rotation="0 90 0"  animation-mixer="clip: *;" position="-4.66107 0 1.63033">
     </a-entity> -->
 
 
-    <!-- <e-entity id="videos"> -->
-    <a-video src="#SuzanneSimard" width="3" height="1.5" position=" 0 1 0"></a-video>
-    <!-- </e-entity> -->
+    <!-- <a-video id="earthVideo" src="#SuzanneSimard" class="video" width="3" height="1.5" position=" 0 1 0"></a-video> -->
+    <a-entity class="clickable" cursor-listener-switch-video geometry="primitive: box" position="2.00376 1.03035 0"
+      geometry="depth: 0.5"></a-entity>
+
+    <a-cylinder color="crimson" height="3" radius=".5" position="0 0 -2"></a-cylinder>
 
 
-    <a-entity id=" environment-sky-light">
+    <a-entity id="environment-sky-light">
       <a-entity environment="preset: default"></a-entity>
       <a-sky color="#ECECEC"></a-sky>
-      <a-entity light="type:directional; castShadow:true;" position="1 1 1"></a-entity>
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
+      <a-camera collider-check position="0 1.7 2">
+        <a-cursor raycaster="objects: .clickable"></a-cursor>
+      </a-camera>
+
     </a-entity>
 
   </a-scene>
