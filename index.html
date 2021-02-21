@@ -14,8 +14,6 @@
   <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js">
   </script>
-
-
 </head>
 
 <body>
@@ -34,7 +32,6 @@
       <img id="water-title-Screen" src="./assets/img/titleScreens/waterTitleScreen1.jpg">
 
       <!-- water textures -->
-      <img id="water-img" src="./assets/textures/water/material_604.png">
       <img id="water-color" src="./assets/textures/water/Water_002_COLOR.jpg">
       <img id="water-displacement" src="./assets/textures/water/Water_002_DISP.png">
       <img id="water-rough" src="./assets/textures/water/Water_002_ROUGH.jpg">
@@ -42,12 +39,18 @@
       <img id="water-occlusion" src="./assets/textures/water/Water_002_OCC.jpg">
 
       <!-- marble textures -->
-      <img id="marble-img" src="./assets/textures/marble/Material_1762.jpg">
       <img id="marble-color" src="./assets/textures/marble/Marble_Blue_004_basecolor.jpg">
       <img id="marble-displacement" src="./assets/textures/marble/Marble_Blue_004_height.png">
       <img id="marble-rough" src="./assets/textures/marble/Marble_Blue_004_roughness.jpg">
       <img id="marble-norm" src="./assets/textures/marble/Marble_Blue_004_normal.jpg">
       <img id="marble-occlusion" src="./assets/textures/marble/Marble_Blue_004_ambientOcclusion.jpg">
+
+      <!-- forest floor textures -->
+      <img id="forestFloor-color" src="./assets/textures/jungleForest/Jungle_Floor_001_basecolor.jpg">
+      <img id="forestFloor-displacement" src="./assets/textures/jungleForest/Jungle_Floor_001_height.png">
+      <img id="forestFloor-rough" src="./assets/textures/jungleForest/Jungle_Floor_001_roughness.jpg">
+      <img id="forestFloor-norm" src="./assets/textures/jungleForest/Jungle_Floor_001_normal.jpg">
+      <img id="forestFloor-occlusion" src="./assets/textures/jungleForest/Jungle_Floor_001_ambientOcclusion.jpg">
 
       <!-- audio assets -->
       <audio id="frogAudio" src="./assets/audioEffects/frog.mp3" preload="auto"></audio>
@@ -164,66 +167,70 @@
     <a-entity gltf-model="#plant33" id="plant33Model" position="-4.54738 0 -14.56643" scale="0.8 0.8 0.8"></a-entity>
     <a-entity gltf-model="#plant34" id="plant34Model" position="-7.73156 0 -8.56883" scale="0.5 0.5 0.5"></a-entity> -->
 
-
     <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
       animation-mixer="clip: *;" position="-8.14324 2.22123 -14.06633">
     </a-entity>
 
-    <a-entity class="clickable" cursor-listener-animal-noise
-      alongpath="curve: #blueWhaleTrack; loop: true; rotate: true; dur:62000" gltf-model="#blue_whale"
-      id="blue_whaleModel" rotation="13.178915920291214 -120.68777816180096 1.633293611787616e-15"
-      scale="0.05 0.05 0.05" animation-mixer="clip: *;"
-      position="13.569890978516664 6.489879222361612 18.223170496163007"> </a-entity>
-    <a-curve id="blueWhaleTrack">
-      <a-curve-point id="curvePoint1" position="3.2179 4.60466 28.86556">"></a-curve-point>
-      <a-curve-point id="curvePoint2" position="18.75928 1.15642 20.44267"></a-curve-point>
-      <a-curve-point id="curvePoint3" position="28.04513 2.34389 4.66223"></a-curve-point>
-      <a-curve-point id="curvePoint4" position="27.0901 3.01614 -19.88462"></a-curve-point>
-      <a-curve-point id="curvePoint5" position="7 4.98471 -35.98918"></a-curve-point>
-      <a-curve-point id="curvePoint6" position="-12.49161 3.84326 -28.10261"></a-curve-point>
-      <a-curve-point id="curvePoint7" position="-29.04753 2.73757 -4.2594"></a-curve-point>
-      <a-curve-point id="curvePoint8" position="-21.60548 0.77163 19.91378"></a-curve-point>
-      <a-curve-point id="curvePoint9" position="-9.50764 1.60466 27.71959">"></a-curve-point>
-    </a-curve>
-    <a-entity alongpath="curve: #fishTrack; loop: true; rotate: true; dur:20000" gltf-model="#fish_animated"
-      id="fish_animatedModel" rotation="3.7168931447719884 179.01959672989128 6.225115092231806e-18"
-      scale="0.01 0.01 0.01" animation-mixer="clip: *;" position="7.00616 1.23545 26.44338">
-    </a-entity>
-    <a-curve id="fishTrack">
-      <a-curve-point id="curvePointFish1" position="-0.45691 1.60466 25.7391"></a-curve-point>
-      <a-curve-point id="curvePointFish2" position="-24.22455 1.15642 19.91743"></a-curve-point>
-      <a-curve-point id="curvePointFish3" position="-28.08706 1.24932 -2.36042"></a-curve-point>
-      <a-curve-point id="curvePointFish4" position="-25.58051 1.15175 -18.30543"></a-curve-point>
-      <a-curve-point id="curvePointFish5" position="-21.73757 6.44377 -23.1994"></a-curve-point>
-      <a-curve-point id="curvePointFish6" position="8.00318 2.22278 -31.24291"></a-curve-point>
-      <a-curve-point id="curvePointFish7" position="27.51288 0.61201 -9.03744"></a-curve-point>
-      <a-curve-point id="curvePointFish8" position="26.75842 0.77163 13.5312"></a-curve-point>
-      <a-curve-point id="curvePointFish9" position="3.88535 1.60466 26.36188"></a-curve-point>
-    </a-curve>
     <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#frog1" id="frog1Model" scale="0.3 0.3 0.3"
       animation-mixer="clip: *;" position="-7.38932 1.82633 7.60275">
     </a-entity>
     <a-entity gltf-model="#frog2" id="frog2Model" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
       position="-5.35588 0.99345 8.71875">
     </a-entity>
+
+    <a-entity id="ocean-assets">
+      <a-entity class="clickable" id="killerWhaleEntity" cursor-listener-animal-noise
+        alongpath="curve: #killerWhaleTrack; loop: true; rotate: true; dur:26000" gltf-model="#killer_whale"
+        id="killer_whaleModel" rotation="-33.169213749004484 -74.55675770446751 -32.211566755548404"
+        scale="0.005 0.005 0.005" animation-mixer="clip: *;"
+        position="21.59411351712182 2.922586531013371 18.402458692841883">
+      </a-entity>
+      <a-curve id="killerWhaleTrack">
+        <a-curve-point id="curvePoint11" position="6.99739 16.08132 27.94744"></a-curve-point>
+        <a-curve-point id="curvePoint12" position="-7.3533 15.46781 27.57867"></a-curve-point>
+        <a-curve-point id="curvePoint13" position="-31.10579 10.16619 3.89098"></a-curve-point>
+        <a-curve-point id="curvePoint14" position="-21.75137 14.03518 -23.15534"></a-curve-point>
+        <a-curve-point id="curvePoint15" position="-6.42277 14.87014 -23.39675"></a-curve-point>
+        <a-curve-point id="curvePoint16" position="14.41478 14.87043 -24.40219"></a-curve-point>
+        <a-curve-point id="curvePoint17" position="25.89319 16.21343 -16.57455"></a-curve-point>
+        <a-curve-point id="curvePoint18" position="32.30905 19.47471 7.69911"></a-curve-point>
+        <a-curve-point id="curvePoint19" position="6.99739 15.62718 29.12208"></a-curve-point>
+      </a-curve>
+
+      <a-entity alongpath="curve: #fishTrack; loop: true; rotate: true; dur:20000" gltf-model="#fish_animated"
+        id="fish_animatedModel" rotation="3.7168931447719884 179.01959672989128 6.225115092231806e-18"
+        scale="0.01 0.01 0.01" animation-mixer="clip: *;" position="7.00616 1.23545 26.44338">
+      </a-entity>
+      <a-curve id="fishTrack">
+        <a-curve-point id="curvePointFish1" position="-0.45691 1.60466 25.7391"></a-curve-point>
+        <a-curve-point id="curvePointFish2" position="-24.22455 1.15642 19.91743"></a-curve-point>
+        <a-curve-point id="curvePointFish3" position="-28.08706 1.24932 -2.36042"></a-curve-point>
+        <a-curve-point id="curvePointFish4" position="-25.58051 1.15175 -18.30543"></a-curve-point>
+        <a-curve-point id="curvePointFish5" position="-21.73757 6.44377 -23.1994"></a-curve-point>
+        <a-curve-point id="curvePointFish6" position="8.00318 2.22278 -31.24291"></a-curve-point>
+        <a-curve-point id="curvePointFish7" position="27.51288 0.61201 -9.03744"></a-curve-point>
+        <a-curve-point id="curvePointFish8" position="26.75842 0.77163 13.5312"></a-curve-point>
+        <a-curve-point id="curvePointFish9" position="3.88535 1.60466 26.36188"></a-curve-point>
+      </a-curve>
+
+      <a-entity class="clickable" id="blueWhaleEntity" cursor-listener-animal-noise
+        alongpath="curve: #blueWhaleTrack; loop: true; rotate: true; dur:62000" gltf-model="#blue_whale"
+        id="blue_whaleModel" rotation="13.178915920291214 -120.68777816180096 1.633293611787616e-15"
+        scale="0.05 0.05 0.05" animation-mixer="clip: *;"
+        position="13.569890978516664 6.489879222361612 18.223170496163007"> </a-entity>
+      <a-curve id="blueWhaleTrack">
+        <a-curve-point id="curvePoint1" position="3.2179 4.60466 28.86556">"></a-curve-point>
+        <a-curve-point id="curvePoint2" position="18.75928 1.15642 20.44267"></a-curve-point>
+        <a-curve-point id="curvePoint3" position="28.04513 2.34389 4.66223"></a-curve-point>
+        <a-curve-point id="curvePoint4" position="27.0901 3.01614 -19.88462"></a-curve-point>
+        <a-curve-point id="curvePoint5" position="7 4.98471 -35.98918"></a-curve-point>
+        <a-curve-point id="curvePoint6" position="-12.49161 3.84326 -28.10261"></a-curve-point>
+        <a-curve-point id="curvePoint7" position="-29.04753 2.73757 -4.2594"></a-curve-point>
+        <a-curve-point id="curvePoint8" position="-21.60548 0.77163 19.91378"></a-curve-point>
+        <a-curve-point id="curvePoint9" position="-9.50764 1.60466 27.71959">"></a-curve-point>
+      </a-curve>
+
     </a-entity>
-    <a-entity class="clickable" cursor-listener-animal-noise
-      alongpath="curve: #killerWhaleTrack; loop: true; rotate: true; dur:26000" gltf-model="#killer_whale"
-      id="killer_whaleModel" rotation="-33.169213749004484 -74.55675770446751 -32.211566755548404"
-      scale="0.005 0.005 0.005" animation-mixer="clip: *;"
-      position="21.59411351712182 2.922586531013371 18.402458692841883">
-    </a-entity>
-    <a-curve id="killerWhaleTrack">
-      <a-curve-point id="curvePoint11" position="6.99739 16.08132 27.94744"></a-curve-point>
-      <a-curve-point id="curvePoint12" position="-7.3533 15.46781 27.57867"></a-curve-point>
-      <a-curve-point id="curvePoint13" position="-31.10579 10.16619 3.89098"></a-curve-point>
-      <a-curve-point id="curvePoint14" position="-21.75137 14.03518 -23.15534"></a-curve-point>
-      <a-curve-point id="curvePoint15" position="-6.42277 14.87014 -23.39675"></a-curve-point>
-      <a-curve-point id="curvePoint16" position="14.41478 14.87043 -24.40219"></a-curve-point>
-      <a-curve-point id="curvePoint17" position="25.89319 16.21343 -16.57455"></a-curve-point>
-      <a-curve-point id="curvePoint18" position="32.30905 19.47471 7.69911"></a-curve-point>
-      <a-curve-point id="curvePoint19" position="6.99739 15.62718 29.12208"></a-curve-point>
-    </a-curve>
 
     <!-- <a-entity alongpath="curve: #bird1Track; loop: true; rotate: true; dur:60000" gltf-model="#bird1" id="bird1Model"
       rotation="0 -90 0" scale="0.1 0.1 0.1" animation-mixer="clip: *;" position="22.21985 7.97617 -8.66105">
@@ -273,67 +280,64 @@
       <a-curve-point id="curvePoint29" position="6.16785 0.78159 -8.93428"></a-curve-point>
     </a-curve>  -->
 
+    <a-entity id="earthPlatform">
+      <a-video id="earthVideo" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
+        position="1.19087 5.69023 -24.31776">
+      </a-video>
+      <a-plane id="earthVideoNextButton" rotation="0 0 0" scale="1 1 1" class="clickable"
+        cursor-listener-switch-earth-video geometry="depth: 0.1" position="7.22202 3.05079 -24.31776"
+        material="shader: flat; src: #next-image; side: front"></a-plane>
+      <a-plane id="earthVideoPlayButton" rotation="0 0 0" scale="2 2 1" class="clickable"
+        cursor-listener-play-earth-video geometry="depth: 0.1" position="1.6064 5.36242 -23.99353"
+        material="shader: flat; src: #play-image; side: front">
+      </a-plane>
+      <a-plane id="earthTitlePlane" scale="2 2 1" rotation="0 0 0" geometry="depth: 0.1; height: 1; width: 2"
+        position="1.41834 1.12485 -24.31776" material="shader: flat; src: #earth-title-Screen; side: front"></a-plane>
+    </a-entity>
 
-    <a-video id="earthVideo" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
-      position="1.19087 5.69023 -24.31776">
-    </a-video>
-    <a-plane id="earthVideoNextButton" rotation="0 0 0" scale="1 1 1" class="clickable"
-      cursor-listener-switch-earth-video geometry="depth: 0.1" position="7.22202 3.05079 -24.31776"
-      material="shader: flat; src: #next-image; side: front"></a-plane>
-    <a-plane id="earthVideoPlayButton" rotation="0 0 0" scale="2 2 1" class="clickable" cursor-listener-play-earth-video
-      geometry="depth: 0.1" position="1.6064 5.36242 -23.99353" material="shader: flat; src: #play-image; side: front">
-    </a-plane>
-    <a-plane id="earthTitlePlane" scale="2 2 1" rotation="0 0 0" geometry="depth: 0.1; height: 1; width: 2"
-      position="1.41834 1.12485 -24.31776" material="shader: flat; src: #earth-title-Screen; side: front"></a-plane>
+    <a-entity id="airPlatform">
+      <a-video id="airVideo" scale="3 3 1" rotation="0 90 0" src="#ArunabhaGhosh" class="video" width="3" height="1.5"
+        position="-22.1295 4.32515 -0.9734"></a-video>
+      <a-plane id="airVideoNextButton" rotation="0 90 0" class="clickable" cursor-listener-switch-air-video
+        geometry="depth: 0.1" position="-22.1295 1.15783 -4.90015"
+        material="shader: flat; src: #next-image; side: front">
+      </a-plane>
+      <a-plane id="airVideoPlayButton" rotation="0 90 0" class="clickable" cursor-listener-play-air-video
+        geometry="depth: 0.1" position="-21.54032 5.3 -1.30243" material="shader: flat; src: #play-image; side: front">
+      </a-plane>
+      <a-plane id="airTitlePlane" scale="2 2 1" rotation="0 90 0" geometry="depth: 0.1; height: 1; width: 2"
+        position="-21.814 1.10417 -1.3383" material="shader: flat; src: #air-title-Screen; side: front"></a-plane>
+    </a-entity>
 
-    <a-video id="airVideo" scale="3 3 1" rotation="0 90 0" src="#ArunabhaGhosh" class="video" width="3" height="1.5"
-      position="-22.1295 4.32515 -0.9734"></a-video>
-    <a-plane id="airVideoNextButton" rotation="0 90 0" class="clickable" cursor-listener-switch-air-video
-      geometry="depth: 0.1" position="-22.1295 1.15783 -4.90015" material="shader: flat; src: #next-image; side: front">
-    </a-plane>
-    <a-plane id="airVideoPlayButton" rotation="0 90 0" class="clickable" cursor-listener-play-air-video
-      geometry="depth: 0.1" position="-21.54032 5.3 -1.30243" material="shader: flat; src: #play-image; side: front">
-    </a-plane>
-    <a-plane id="airTitlePlane" scale="2 2 1" rotation="0 90 0" geometry="depth: 0.1; height: 1; width: 2"
-      position="-21.814 1.10417 -1.3383" material="shader: flat; src: #air-title-Screen; side: front"></a-plane>
-
-
-    <a-video id="waterVideo" scale="3 3 1" rotation="0 -90 0" src="#AlasdairHarris" class="video" width="3" height="1.5"
-      position="23.64822 4.462 -0.62314">
-    </a-video>
-    <a-plane id="waterVideoNextButton" rotation="0 -90 0" class="clickable" cursor-listener-switch-water-video
-      geometry="depth: 0.1" position="23.64822 1.21924 2.73143" material="shader: flat; src: #next-image; side: front">
-    </a-plane>
-    <a-plane id="waterVideoPlayButton" rotation="0 -90 0" class="clickable" cursor-listener-play-water-video
-      geometry="depth: 0.1" position="21.84742 4.2233 -0.80972" material="shader: flat; src: #play-image; side: front">
-    </a-plane>
-    <a-plane id="waterTitlePlane" scale="2 2 1" rotation="0 -90 0" geometry="depth: 0.1; height: 1; width: 2"
-      position="23.56772 1.20063 -0.66655" material="shader: flat; src: #water-title-Screen; side: front"></a-plane>
-
+    <a-entity id="waterPlatform">
+      <a-video id="waterVideo" scale="3 3 1" rotation="0 -90 0" src="#AlasdairHarris" class="video" width="3"
+        height="1.5" position="23.64822 4.462 -0.62314">
+      </a-video>
+      <a-plane id="waterVideoNextButton" rotation="0 -90 0" class="clickable" cursor-listener-switch-water-video
+        geometry="depth: 0.1" position="23.64822 1.21924 2.73143"
+        material="shader: flat; src: #next-image; side: front">
+      </a-plane>
+      <a-plane id="waterVideoPlayButton" rotation="0 -90 0" class="clickable" cursor-listener-play-water-video
+        geometry="depth: 0.1" position="21.84742 4.2233 -0.80972"
+        material="shader: flat; src: #play-image; side: front">
+      </a-plane>
+      <a-plane id="waterTitlePlane" scale="2 2 1" rotation="0 -90 0" geometry="depth: 0.1; height: 1; width: 2"
+        position="23.56772 1.20063 -0.66655" material="shader: flat; src: #water-title-Screen; side: front"></a-plane>
+    </a-entity>
     <!-- <a-cylinder color="crimson" height="3" radius=".5" position="0 0 -2"></a-cylinder> -->
 
-    <!-- <a-entity id="top-left" scale="20 0.3 20" position="-10.01707 0 -12.11289"
-      geometry="primitive: box; height: 1; depth: 1" material="shader: flat; color: red">
+    <a-entity id="pathway">
+      <a-plane id="planefront" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
+        position="1.01318 0.1 9.94986" src="#ground-texture" height="100" width="100" rotation="-90 90 0"></a-plane>
+      <a-plane id="planeleft" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
+        position="-9.90166 0.1 -1.63485" src="#ground-texture" height="100" width="100" rotation="-90 0 0"></a-plane>
+      <a-plane id="planeright" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
+        position="13.32059 0.1 -1.59847" src="#ground-texture" height="100" width="100" rotation="-90 0 0"></a-plane>
+      <a-plane id="planeback" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
+        position="1.01318 0.1 -12.09933" src="#ground-texture" height="100" width="100" rotation="-90 90 0"></a-plane>
     </a-entity>
-    <a-entity id="top-right" scale="20 0.3 20" position="12.05955 0 -11.91923"
-      geometry="primitive: box; depth: 1; height: 1" material="shader: flat; color: red" geometry="depth: 0.1">
-    </a-entity>
-    <a-entity id="bottom-left" scale="20 0.3 20" position="-9.88396 0 9.93535" geometry="primitive: box; height: 1"
-      material="shader: flat; color: red"></a-entity>
-    <a-entity id="bottom-right" scale="20 0.3 20" position="11.9928 0 10.00495" geometry="primitive: box; height: 1"
-      material="shader: flat; color: red"></a-entity> -->
 
-    <a-plane id="planefront" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
-      position="1.01318 0.1 9.94986" src="#ground-texture" height="100" width="100" rotation="-90 90 0"></a-plane>
-    <a-plane id="planeleft" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
-      position="-9.90166 0.1 -1.63485" src="#ground-texture" height="100" width="100" rotation="-90 0 0"></a-plane>
-    <a-plane id="planeright" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
-      position="13.32059 0.1 -1.59847" src="#ground-texture" height="100" width="100" rotation="-90 0 0"></a-plane>
-    <a-plane id="planeback" scale="1 1 1" geometry="height: 10; width: 20; segmentsHeight: 20"
-      position="1.01318 0.1 -12.09933" src="#ground-texture" height="100" width="100" rotation="-90 90 0"></a-plane>
-
-    <a-entity id="environment-sky-light">
-      <a-entity environment="preset: default"></a-entity>
+    <a-entity id="camera-sky">
       <a-sky color="#ECECEC"></a-sky>
       <a-camera dynamic-body collider-check position="1.3 1.7 25">
         <a-cursor raycaster="objects: .clickable"></a-cursor>
@@ -351,10 +355,59 @@
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
       <a-entity id="spotLight4" position="12.33059 6 -12.81012" rotation="-90 0 0"
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
-
     </a-entity>
 
-    <a-entity fence="width: 10; depth: 10; x0: -1; z0: 2"></a-entity>
+    <a-entity id="bottomLeftQuarter" position="-11.67676 -10 11"
+      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: linear; loop: false">
+      <a-plane id="bottomLeftForestFloor" rotation="-90 0 0" position="0 0 0 "
+        geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
+      displacementMap: #forestFloor-displacement;
+      ambientOcclusionMap: #forestFloor-occlusion;
+      normalMap: #forestFloor-norm;
+      color: #forestFloor-color;
+      roughnessMap: #forestFloor-rough;
+      ">
+      </a-plane>
+    </a-entity>
+
+    <a-entity id="bottomRightForestFloor" position="13.64479 -10 11.06362"
+      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: linear; loop: false">
+      <a-plane id="bottomRightForestFloor" rotation="-90 0 0" position="0 0 0"
+        geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
+    displacementMap: #forestFloor-displacement;
+    ambientOcclusionMap: #forestFloor-occlusion;
+    normalMap: #forestFloor-norm;
+    color: #forestFloor-color;
+    roughnessMap: #forestFloor-rough;
+    ">
+      </a-plane>
+    </a-entity>
+
+    <a-entity id="topLeftForestFloor" position="-11.67676 -10 -14.57073"
+      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: linear; loop: false">
+      <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
+        material="side: front; 
+  displacementMap: #forestFloor-displacement;
+  ambientOcclusionMap: #forestFloor-occlusion;
+  normalMap: #forestFloor-norm;
+  color: #forestFloor-color;
+  roughnessMap: #forestFloor-rough;
+  ">
+      </a-plane>
+    </a-entity>
+
+    <a-entity id="topRightForestFloor" position="13.45811 -10 -14.11624"
+      animation="property: position; to: 13.45811 -0.6 -14.11624; dur: 6000; easing: linear; loop: false">
+      <a-plane id="topRightForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
+        material="side: front; 
+displacementMap: #forestFloor-displacement;
+ambientOcclusionMap: #forestFloor-occlusion;
+normalMap: #forestFloor-norm;
+color: #forestFloor-color;
+roughnessMap: #forestFloor-rough;
+">
+      </a-plane>
+    </a-entity>
 
 
     <a-entity id="boundary">
@@ -371,7 +424,6 @@
         ">
       </a-sphere>
     </a-entity>
-
 
   </a-scene>
 </body>
