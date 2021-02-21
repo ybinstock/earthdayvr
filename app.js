@@ -1,3 +1,7 @@
+// fetch("./assets/data/earth.json")
+//   .then(response => response.json())
+//   .then(json => console.log(json));
+
 const earthVideoArray = [{
     title: "A climate change solution that's right under our feet",
     speaker: "Asmeret Asefaw Berhe",
@@ -266,7 +270,7 @@ AFRAME.registerComponent('cursor-listener-switch-water-video', {
     let lastIndex = -1;
     let title = "";
     let speaker = "";
-    console.log(' waterVideoArray.length', waterVideoArray.length)
+    // console.log(' waterVideoArray.length', waterVideoArray.length)
 
     this.el.addEventListener('click', function (evt) {
       console.log(' inside water video switch component')
@@ -389,10 +393,24 @@ AFRAME.registerComponent('cursor-listener-play-air-video', {
 AFRAME.registerComponent('cursor-listener-animal-noise', {
   init: function () {
     let playing = false;
-    let audio = document.querySelector("#animalgrowl");
-    this.el.addEventListener('click', function () {
+    let audio = null;
+    let currentElement = "";
+    this.el.addEventListener('click', function (evt) {
+      currentElement = evt.srcElement.id;
+      if (currentElement === 'blue_whaleModel') {
+        audio = document.querySelector("#whale1Audio");
+      }
+      if (currentElement === 'killer_whaleModel') {
+        audio = document.querySelector("#whale2Audio");
+      }
+      if (currentElement === 'frog1Model') {
+        audio = document.querySelector("#frogAudio");
+      }
+      if (currentElement === 'snakeModel') {
+        audio = document.querySelector("#snakeAudio");
+      }
       if (!playing) {
-        // audio.play();
+        audio.play();
       } else {
         audio.pause();
         audio.currentTime = 0;
