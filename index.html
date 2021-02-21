@@ -9,12 +9,19 @@
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
   <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js">
   </script>
+  <script src="https://rawgit.com/atomicguy/aframe-fence-component/master/dist/aframe-fence-component.min.js"></script>
+
+  <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js">
+  </script>
+
+
 </head>
 
 <body>
-  <!-- <a-scene stats> -->
-  <a-scene gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;"
-    loading-screen="dotsColor: red; backgroundColor: black" fog="type: linear; color: #AAA; density: 0.025">
+  <a-scene id="sceneComponent" fog="color:  #00f5f5;  far:  92;  density:  0"
+    gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;"
+    loading-screen="dotsColor: red; backgroundColor: black">
 
     <a-assets>
       <img id="next-image" src="./assets/img/right-arrow.png">
@@ -33,6 +40,14 @@
       <img id="water-rough" src="./assets/textures/water/Water_002_ROUGH.jpg">
       <img id="water-norm" src="./assets/textures/water/Water_002_NORM.jpg">
       <img id="water-occlusion" src="./assets/textures/water/Water_002_OCC.jpg">
+
+      <!-- marble textures -->
+      <img id="marble-img" src="./assets/textures/marble/Material_1762.jpg">
+      <img id="marble-color" src="./assets/textures/marble/Marble_Blue_004_basecolor.jpg">
+      <img id="marble-displacement" src="./assets/textures/marble/Marble_Blue_004_height.png">
+      <img id="marble-rough" src="./assets/textures/marble/Marble_Blue_004_roughness.jpg">
+      <img id="marble-norm" src="./assets/textures/marble/Marble_Blue_004_normal.jpg">
+      <img id="marble-occlusion" src="./assets/textures/marble/Marble_Blue_004_ambientOcclusion.jpg">
 
       <!-- audio assets -->
       <audio id="frogAudio" src="./assets/audioEffects/frog.mp3" preload="auto"></audio>
@@ -149,8 +164,9 @@
     <a-entity gltf-model="#plant33" id="plant33Model" position="-4.54738 0 -14.56643" scale="0.8 0.8 0.8"></a-entity>
     <a-entity gltf-model="#plant34" id="plant34Model" position="-7.73156 0 -8.56883" scale="0.5 0.5 0.5"></a-entity> -->
 
-    <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#butterfly3" rotation="0 180 0"
-      id="butterfly3Model" scale="0.4 0.4 0.4" animation-mixer="clip: *;" position="-8.14324 2.22123 -14.06633">
+
+    <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
+      animation-mixer="clip: *;" position="-8.14324 2.22123 -14.06633">
     </a-entity>
 
     <a-entity class="clickable" cursor-listener-animal-noise
@@ -208,10 +224,11 @@
       <a-curve-point id="curvePoint18" position="32.30905 19.47471 7.69911"></a-curve-point>
       <a-curve-point id="curvePoint19" position="6.99739 15.62718 29.12208"></a-curve-point>
     </a-curve>
+
     <!-- <a-entity alongpath="curve: #bird1Track; loop: true; rotate: true; dur:60000" gltf-model="#bird1" id="bird1Model"
       rotation="0 -90 0" scale="0.1 0.1 0.1" animation-mixer="clip: *;" position="22.21985 7.97617 -8.66105">
-    </a-entity> -->
-    <!--
+    </a-entity>
+    
     <a-curve id="bird1Track">
       <a-curve-point id="curvePoint31" position="22.21985 7.97617 -8.66105"></a-curve-point>
       <a-curve-point id="curvePoint32" position="14.46598 7.97617 -8.66105"></a-curve-point>
@@ -254,7 +271,8 @@
       <a-curve-point id="curvePoint27" position="5.50468 0.78159 -15.4259"></a-curve-point>
       <a-curve-point id="curvePoint28" position="6.16785 0.78159 -11.11432"></a-curve-point>
       <a-curve-point id="curvePoint29" position="6.16785 0.78159 -8.93428"></a-curve-point>
-    </a-curve> 
+    </a-curve>  -->
+
 
     <a-video id="earthVideo" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
       position="1.19087 5.69023 -24.31776">
@@ -291,7 +309,7 @@
     </a-plane>
     <a-plane id="waterTitlePlane" scale="2 2 1" rotation="0 -90 0" geometry="depth: 0.1; height: 1; width: 2"
       position="23.56772 1.20063 -0.66655" material="shader: flat; src: #water-title-Screen; side: front"></a-plane>
--->
+
     <!-- <a-cylinder color="crimson" height="3" radius=".5" position="0 0 -2"></a-cylinder> -->
 
     <!-- <a-entity id="top-left" scale="20 0.3 20" position="-10.01707 0 -12.11289"
@@ -317,17 +335,33 @@
     <a-entity id="environment-sky-light">
       <a-entity environment="preset: default"></a-entity>
       <a-sky color="#ECECEC"></a-sky>
-      <a-entity light="type: ambient; color: #BBB"></a-entity>
-      <a-camera collider-check position="1.3 1.7 25">
+      <a-camera dynamic-body collider-check position="1.3 1.7 25">
         <a-cursor raycaster="objects: .clickable"></a-cursor>
       </a-camera>
       <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 5"></a-entity>
     </a-entity>
 
+    <a-entity id="lights">
+      <a-entity light="type: ambient; intensity: 0.1; color: ##080808"></a-entity>
+      <a-entity id="spotLight1" rotation="-90 0 0" position="10.93422 6.88767 7.85159"
+        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
+      <a-entity id="spotLight2" position="-11.18841 6 9.00754" rotation="-90 0 0"
+        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
+      <a-entity id="spotLight3" position="-9.69237 6 -13.87181" rotation="-90 0 0"
+        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
+      <a-entity id="spotLight4" position="12.33059 6 -12.81012" rotation="-90 0 0"
+        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
+
+    </a-entity>
+
+    <a-entity fence="width: 10; depth: 10; x0: -1; z0: 2"></a-entity>
+
+
     <a-entity id="boundary">
-      <a-sphere id="outerSphereBoundary" geometry="radius: 50" material="side: back; color: blue; opacity: 1">
+      <a-sphere static-body id="outerSphereBoundary" geometry="radius: 50"
+        material="side: back; color: blue; opacity: 1">
       </a-sphere>
-      <a-sphere id="innerSphereBoundary" position="0 -13.9631 -1.50949" geometry="radius: 30" material="side: double; 
+      <a-sphere dynamic-body id="innerSphereBoundary" position="0 -13.9631 -1.499" geometry="radius: 30" material="side: double; 
         color: blue; 
         opacity: .5; 
         displacementMap: #water-displacement;
