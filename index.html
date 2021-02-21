@@ -139,6 +139,59 @@
       <a-asset-item id="snake" src="./assets/models/animals/snake/modelDraco.gltf"></a-asset-item>
 
     </a-assets>
+
+    <a-entity id="ocean-assets">
+      <a-entity class="clickable" id="killerWhaleEntity" cursor-listener-animal-noise
+        alongpath="curve: #killerWhaleTrack; loop: true; rotate: true; dur:26000" gltf-model="#killer_whale"
+        id="killer_whaleModel" rotation="-33.169213749004484 -74.55675770446751 -32.211566755548404"
+        scale="0.005 0.005 0.005" animation-mixer="clip: *;"
+        position="21.59411351712182 2.922586531013371 18.402458692841883">
+      </a-entity>
+      <a-curve id="killerWhaleTrack">
+        <a-curve-point id="curvePoint11" position="6.99739 16.08132 27.94744"></a-curve-point>
+        <a-curve-point id="curvePoint12" position="-7.3533 15.46781 27.57867"></a-curve-point>
+        <a-curve-point id="curvePoint13" position="-31.10579 10.16619 3.89098"></a-curve-point>
+        <a-curve-point id="curvePoint14" position="-21.75137 14.03518 -23.15534"></a-curve-point>
+        <a-curve-point id="curvePoint15" position="-6.42277 14.87014 -23.39675"></a-curve-point>
+        <a-curve-point id="curvePoint16" position="14.41478 14.87043 -24.40219"></a-curve-point>
+        <a-curve-point id="curvePoint17" position="25.89319 16.21343 -16.57455"></a-curve-point>
+        <a-curve-point id="curvePoint18" position="32.30905 19.47471 7.69911"></a-curve-point>
+        <a-curve-point id="curvePoint19" position="6.99739 15.62718 29.12208"></a-curve-point>
+      </a-curve>
+      <a-entity alongpath="curve: #fishTrack; loop: true; rotate: true; dur:20000" gltf-model="#fish_animated"
+        id="fish_animatedModel" rotation="3.7168931447719884 179.01959672989128 6.225115092231806e-18"
+        scale="0.01 0.01 0.01" animation-mixer="clip: *;" position="7.00616 1.23545 26.44338">
+      </a-entity>
+      <a-curve id="fishTrack">
+        <a-curve-point id="curvePointFish1" position="-0.45691 1.60466 25.7391"></a-curve-point>
+        <a-curve-point id="curvePointFish2" position="-24.22455 1.15642 19.91743"></a-curve-point>
+        <a-curve-point id="curvePointFish3" position="-28.08706 1.24932 -2.36042"></a-curve-point>
+        <a-curve-point id="curvePointFish4" position="-25.58051 1.15175 -18.30543"></a-curve-point>
+        <a-curve-point id="curvePointFish5" position="-21.73757 6.44377 -23.1994"></a-curve-point>
+        <a-curve-point id="curvePointFish6" position="8.00318 2.22278 -31.24291"></a-curve-point>
+        <a-curve-point id="curvePointFish7" position="27.51288 0.61201 -9.03744"></a-curve-point>
+        <a-curve-point id="curvePointFish8" position="26.75842 0.77163 13.5312"></a-curve-point>
+        <a-curve-point id="curvePointFish9" position="3.88535 1.60466 26.36188"></a-curve-point>
+      </a-curve>
+      <a-entity class="clickable" id="blueWhaleEntity" cursor-listener-animal-noise
+        alongpath="curve: #blueWhaleTrack; loop: true; rotate: true; dur:62000" gltf-model="#blue_whale"
+        id="blue_whaleModel" rotation="13.178915920291214 -120.68777816180096 1.633293611787616e-15"
+        scale="0.05 0.05 0.05" animation-mixer="clip: *;"
+        position="13.569890978516664 6.489879222361612 18.223170496163007"> </a-entity>
+      <a-curve id="blueWhaleTrack">
+        <a-curve-point id="curvePoint1" position="3.2179 4.60466 28.86556">"></a-curve-point>
+        <a-curve-point id="curvePoint2" position="18.75928 1.15642 20.44267"></a-curve-point>
+        <a-curve-point id="curvePoint3" position="28.04513 2.34389 4.66223"></a-curve-point>
+        <a-curve-point id="curvePoint4" position="27.0901 3.01614 -19.88462"></a-curve-point>
+        <a-curve-point id="curvePoint5" position="7 4.98471 -35.98918"></a-curve-point>
+        <a-curve-point id="curvePoint6" position="-12.49161 3.84326 -28.10261"></a-curve-point>
+        <a-curve-point id="curvePoint7" position="-29.04753 2.73757 -4.2594"></a-curve-point>
+        <a-curve-point id="curvePoint8" position="-21.60548 0.77163 19.91378"></a-curve-point>
+        <a-curve-point id="curvePoint9" position="-9.50764 1.60466 27.71959">"></a-curve-point>
+      </a-curve>
+
+    </a-entity>
+
     <!-- 
     <a-entity gltf-model="#plant2" id="plant2Model" scale="5 5 5" position="-11.61102 -6.926 14.079"></a-entity>
     <a-entity gltf-model="#plant3" id="plant3Model" scale="5 5 5" position="-7.90375 1.99872 14.87919"></a-entity>
@@ -166,119 +219,6 @@
     <a-entity gltf-model="#plant32" id="plant32Model" position="-6.34133 0 6.13389" scale="0.3 0.3 0.3"></a-entity>
     <a-entity gltf-model="#plant33" id="plant33Model" position="-4.54738 0 -14.56643" scale="0.8 0.8 0.8"></a-entity>
     <a-entity gltf-model="#plant34" id="plant34Model" position="-7.73156 0 -8.56883" scale="0.5 0.5 0.5"></a-entity> -->
-
-    <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
-      animation-mixer="clip: *;" position="-8.14324 2.22123 -14.06633">
-    </a-entity>
-
-    <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#frog1" id="frog1Model" scale="0.3 0.3 0.3"
-      animation-mixer="clip: *;" position="-7.38932 1.82633 7.60275">
-    </a-entity>
-    <a-entity gltf-model="#frog2" id="frog2Model" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
-      position="-5.35588 0.99345 8.71875">
-    </a-entity>
-
-    <a-entity id="ocean-assets">
-      <a-entity class="clickable" id="killerWhaleEntity" cursor-listener-animal-noise
-        alongpath="curve: #killerWhaleTrack; loop: true; rotate: true; dur:26000" gltf-model="#killer_whale"
-        id="killer_whaleModel" rotation="-33.169213749004484 -74.55675770446751 -32.211566755548404"
-        scale="0.005 0.005 0.005" animation-mixer="clip: *;"
-        position="21.59411351712182 2.922586531013371 18.402458692841883">
-      </a-entity>
-      <a-curve id="killerWhaleTrack">
-        <a-curve-point id="curvePoint11" position="6.99739 16.08132 27.94744"></a-curve-point>
-        <a-curve-point id="curvePoint12" position="-7.3533 15.46781 27.57867"></a-curve-point>
-        <a-curve-point id="curvePoint13" position="-31.10579 10.16619 3.89098"></a-curve-point>
-        <a-curve-point id="curvePoint14" position="-21.75137 14.03518 -23.15534"></a-curve-point>
-        <a-curve-point id="curvePoint15" position="-6.42277 14.87014 -23.39675"></a-curve-point>
-        <a-curve-point id="curvePoint16" position="14.41478 14.87043 -24.40219"></a-curve-point>
-        <a-curve-point id="curvePoint17" position="25.89319 16.21343 -16.57455"></a-curve-point>
-        <a-curve-point id="curvePoint18" position="32.30905 19.47471 7.69911"></a-curve-point>
-        <a-curve-point id="curvePoint19" position="6.99739 15.62718 29.12208"></a-curve-point>
-      </a-curve>
-
-      <a-entity alongpath="curve: #fishTrack; loop: true; rotate: true; dur:20000" gltf-model="#fish_animated"
-        id="fish_animatedModel" rotation="3.7168931447719884 179.01959672989128 6.225115092231806e-18"
-        scale="0.01 0.01 0.01" animation-mixer="clip: *;" position="7.00616 1.23545 26.44338">
-      </a-entity>
-      <a-curve id="fishTrack">
-        <a-curve-point id="curvePointFish1" position="-0.45691 1.60466 25.7391"></a-curve-point>
-        <a-curve-point id="curvePointFish2" position="-24.22455 1.15642 19.91743"></a-curve-point>
-        <a-curve-point id="curvePointFish3" position="-28.08706 1.24932 -2.36042"></a-curve-point>
-        <a-curve-point id="curvePointFish4" position="-25.58051 1.15175 -18.30543"></a-curve-point>
-        <a-curve-point id="curvePointFish5" position="-21.73757 6.44377 -23.1994"></a-curve-point>
-        <a-curve-point id="curvePointFish6" position="8.00318 2.22278 -31.24291"></a-curve-point>
-        <a-curve-point id="curvePointFish7" position="27.51288 0.61201 -9.03744"></a-curve-point>
-        <a-curve-point id="curvePointFish8" position="26.75842 0.77163 13.5312"></a-curve-point>
-        <a-curve-point id="curvePointFish9" position="3.88535 1.60466 26.36188"></a-curve-point>
-      </a-curve>
-
-      <a-entity class="clickable" id="blueWhaleEntity" cursor-listener-animal-noise
-        alongpath="curve: #blueWhaleTrack; loop: true; rotate: true; dur:62000" gltf-model="#blue_whale"
-        id="blue_whaleModel" rotation="13.178915920291214 -120.68777816180096 1.633293611787616e-15"
-        scale="0.05 0.05 0.05" animation-mixer="clip: *;"
-        position="13.569890978516664 6.489879222361612 18.223170496163007"> </a-entity>
-      <a-curve id="blueWhaleTrack">
-        <a-curve-point id="curvePoint1" position="3.2179 4.60466 28.86556">"></a-curve-point>
-        <a-curve-point id="curvePoint2" position="18.75928 1.15642 20.44267"></a-curve-point>
-        <a-curve-point id="curvePoint3" position="28.04513 2.34389 4.66223"></a-curve-point>
-        <a-curve-point id="curvePoint4" position="27.0901 3.01614 -19.88462"></a-curve-point>
-        <a-curve-point id="curvePoint5" position="7 4.98471 -35.98918"></a-curve-point>
-        <a-curve-point id="curvePoint6" position="-12.49161 3.84326 -28.10261"></a-curve-point>
-        <a-curve-point id="curvePoint7" position="-29.04753 2.73757 -4.2594"></a-curve-point>
-        <a-curve-point id="curvePoint8" position="-21.60548 0.77163 19.91378"></a-curve-point>
-        <a-curve-point id="curvePoint9" position="-9.50764 1.60466 27.71959">"></a-curve-point>
-      </a-curve>
-
-    </a-entity>
-
-    <!-- <a-entity alongpath="curve: #bird1Track; loop: true; rotate: true; dur:60000" gltf-model="#bird1" id="bird1Model"
-      rotation="0 -90 0" scale="0.1 0.1 0.1" animation-mixer="clip: *;" position="22.21985 7.97617 -8.66105">
-    </a-entity>
-    
-    <a-curve id="bird1Track">
-      <a-curve-point id="curvePoint31" position="22.21985 7.97617 -8.66105"></a-curve-point>
-      <a-curve-point id="curvePoint32" position="14.46598 7.97617 -8.66105"></a-curve-point>
-      <a-curve-point id="curvePoint33" position="6.88013 7.97617 -8.66105"></a-curve-point>
-      <a-curve-point id="curvePoint34" position="6.79177 7.97617 -13.19276"></a-curve-point>
-      <a-curve-point id="curvePoint35" position="5.82417 7.97617 -17.85103"></a-curve-point>
-      <a-curve-point id="curvePoint36" position="8.13886 7.97617 -26.38203"></a-curve-point>
-      <a-curve-point id="curvePoint37" position="14.63179 7.97617 -25.30459"></a-curve-point>
-      <a-curve-point id="curvePoint38" position="22.21985 7.97617 -21.92501"></a-curve-point>
-      <a-curve-point id="curvePoint39" position="22.21985 7.97617 -8.66105"></a-curve-point>
-    </a-curve>
-
-    <a-entity alongpath="curve: #bird2Track; loop: true; rotate: true; dur:40000" gltf-model="#bird2" id="bird2Model"
-      scale="0.7 0.7 0.7" animation-mixer="clip: *;" position="-8.83448 10.05124 -12.67997">
-    </a-entity>
-
-    <a-curve id="bird2Track">
-      <a-curve-point id="curvePoint41" position="-8.83448 10.05124 -12.67997"></a-curve-point>
-      <a-curve-point id="curvePoint42" position="-8.83448 10.05124 -7.47447"></a-curve-point>
-      <a-curve-point id="curvePoint43" position="-15.33356 10.05124 -7.63406"></a-curve-point>
-      <a-curve-point id="curvePoint44" position="-19.47073 10.05124 -7.78512"></a-curve-point>
-      <a-curve-point id="curvePoint45" position="-21.50591 10.05124 -12.67997"></a-curve-point>
-      <a-curve-point id="curvePoint46" position="-18.26164 10 -20.75913"></a-curve-point>
-      <a-curve-point id="curvePoint47" position="-13.9444 10.05124 -22.31094"></a-curve-point>
-      <a-curve-point id="curvePoint48" position="-8.83448 10.05124 -20.32011"></a-curve-point>
-      <a-curve-point id="curvePoint49" position="-8.83448 10.05124 -12.67997"></a-curve-point>
-    </a-curve>
-
-    <a-entity class="clickable" cursor-listener-animal-noise alongpath="curve: #snakeTrack; loop: true; rotate: true; dur:60000" gltf-model="#snake" id="snakeModel"
-      scale="0.05 0.05 0.05" animation-mixer="clip: *;" position="6.16785 0.78159 -8.93428">
-    </a-entity>
-
-    <a-curve id="snakeTrack">
-      <a-curve-point id="curvePoint21" position="6.16785 0.78159 -8.93428"></a-curve-point>
-      <a-curve-point id="curvePoint22" position="9.72279 0.78159 -8.93428"></a-curve-point>
-      <a-curve-point id="curvePoint23" position="16.99108 0.78159 -8.93428"></a-curve-point>
-      <a-curve-point id="curvePoint24" position="16.58691 0.78159 -14.03401"></a-curve-point>
-      <a-curve-point id="curvePoint25" position="12.12615 0.78159 -18.90386"></a-curve-point>
-      <a-curve-point id="curvePoint26" position="8.31737 0.78159 -16.38672"></a-curve-point>
-      <a-curve-point id="curvePoint27" position="5.50468 0.78159 -15.4259"></a-curve-point>
-      <a-curve-point id="curvePoint28" position="6.16785 0.78159 -11.11432"></a-curve-point>
-      <a-curve-point id="curvePoint29" position="6.16785 0.78159 -8.93428"></a-curve-point>
-    </a-curve>  -->
 
     <a-entity id="earthPlatform">
       <a-video id="earthVideo" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
@@ -357,9 +297,66 @@
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
     </a-entity>
 
+
+
+
+
+    <a-entity alongpath="curve: #bird1Track; loop: true; rotate: true; dur:60000" gltf-model="#bird1" id="bird1Model"
+      rotation="0 -90 0" scale="0.1 0.1 0.1" animation-mixer="clip: *;" position="22.21985 7.97617 -8.66105">
+    </a-entity>
+    <a-curve id="bird1Track">
+      <a-curve-point id="curvePoint31" position="22.21985 7.97617 -8.66105"></a-curve-point>
+      <a-curve-point id="curvePoint32" position="14.46598 7.97617 -8.66105"></a-curve-point>
+      <a-curve-point id="curvePoint33" position="6.88013 7.97617 -8.66105"></a-curve-point>
+      <a-curve-point id="curvePoint34" position="6.79177 7.97617 -13.19276"></a-curve-point>
+      <a-curve-point id="curvePoint35" position="5.82417 7.97617 -17.85103"></a-curve-point>
+      <a-curve-point id="curvePoint36" position="8.13886 7.97617 -26.38203"></a-curve-point>
+      <a-curve-point id="curvePoint37" position="14.63179 7.97617 -25.30459"></a-curve-point>
+      <a-curve-point id="curvePoint38" position="22.21985 7.97617 -21.92501"></a-curve-point>
+      <a-curve-point id="curvePoint39" position="22.21985 7.97617 -8.66105"></a-curve-point>
+    </a-curve>
+
+    <a-entity alongpath="curve: #bird2Track; loop: true; rotate: true; dur:40000" gltf-model="#bird2" id="bird2Model"
+      scale="0.7 0.7 0.7" animation-mixer="clip: *;" position="-8.83448 10.05124 -12.67997">
+    </a-entity>
+    <a-curve id="bird2Track">
+      <a-curve-point id="curvePoint41" position="-8.83448 10.05124 -12.67997"></a-curve-point>
+      <a-curve-point id="curvePoint42" position="-8.83448 10.05124 -7.47447"></a-curve-point>
+      <a-curve-point id="curvePoint43" position="-15.33356 10.05124 -7.63406"></a-curve-point>
+      <a-curve-point id="curvePoint44" position="-19.47073 10.05124 -7.78512"></a-curve-point>
+      <a-curve-point id="curvePoint45" position="-21.50591 10.05124 -12.67997"></a-curve-point>
+      <a-curve-point id="curvePoint46" position="-18.26164 10 -20.75913"></a-curve-point>
+      <a-curve-point id="curvePoint47" position="-13.9444 10.05124 -22.31094"></a-curve-point>
+      <a-curve-point id="curvePoint48" position="-8.83448 10.05124 -20.32011"></a-curve-point>
+      <a-curve-point id="curvePoint49" position="-8.83448 10.05124 -12.67997"></a-curve-point>
+    </a-curve>
+
+
+
     <a-entity id="bottomLeftQuarter" position="-11.67676 -10 11"
-      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: linear; loop: false">
+      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: linear; loop: NaN">
       <a-plane id="bottomLeftForestFloor" rotation="-90 0 0" position="0 0 0 "
+        geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
+        displacementMap: #forestFloor-displacement;
+        ambientOcclusionMap: #forestFloor-occlusion;
+        normalMap: #forestFloor-norm;
+        color: #forestFloor-color;
+        roughnessMap: #forestFloor-rough;
+        ">
+      </a-plane>
+      <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#frog1" id="frog1Model" scale="0.3 0.3 0.3"
+        animation-mixer="clip: *;" position="5.64515 3.3662 -3.6706">
+      </a-entity>
+
+      <a-entity gltf-model="#frog2" id="frog2Model" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
+        position="0 0.7906 0">
+      </a-entity>
+
+    </a-entity>
+
+    <a-entity id="bottomRightForestFloor" position="13.64479 -10 11.06362"
+      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: linear; loop: NaN">
+      <a-plane id="bottomRightForestFloor" rotation="-90 0 0" position="0 0 0"
         geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
       displacementMap: #forestFloor-displacement;
       ambientOcclusionMap: #forestFloor-occlusion;
@@ -368,12 +365,15 @@
       roughnessMap: #forestFloor-rough;
       ">
       </a-plane>
+      <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
+        animation-mixer="clip: *;" position="0 2.8962 0">
+      </a-entity>
     </a-entity>
 
-    <a-entity id="bottomRightForestFloor" position="13.64479 -10 11.06362"
-      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: linear; loop: false">
-      <a-plane id="bottomRightForestFloor" rotation="-90 0 0" position="0 0 0"
-        geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
+    <a-entity id="topLeftForestFloor" position="-11.67676 -10 -14.57073"
+      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: linear; loop: false">
+      <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
+        material="side: front; 
     displacementMap: #forestFloor-displacement;
     ambientOcclusionMap: #forestFloor-occlusion;
     normalMap: #forestFloor-norm;
@@ -381,11 +381,12 @@
     roughnessMap: #forestFloor-rough;
     ">
       </a-plane>
+
     </a-entity>
 
-    <a-entity id="topLeftForestFloor" position="-11.67676 -10 -14.57073"
-      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: linear; loop: false">
-      <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
+    <a-entity id="topRightForestFloor" position="13.45811 -10 -14.11624"
+      animation="property: position; to: 13.45811 -0.6 -14.11624; dur: 6000; easing: linear; loop: false">
+      <a-plane id="topRightForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
         material="side: front; 
   displacementMap: #forestFloor-displacement;
   ambientOcclusionMap: #forestFloor-occlusion;
@@ -394,19 +395,23 @@
   roughnessMap: #forestFloor-rough;
   ">
       </a-plane>
-    </a-entity>
 
-    <a-entity id="topRightForestFloor" position="13.45811 -10 -14.11624"
-      animation="property: position; to: 13.45811 -0.6 -14.11624; dur: 6000; easing: linear; loop: false">
-      <a-plane id="topRightForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
-        material="side: front; 
-displacementMap: #forestFloor-displacement;
-ambientOcclusionMap: #forestFloor-occlusion;
-normalMap: #forestFloor-norm;
-color: #forestFloor-color;
-roughnessMap: #forestFloor-rough;
-">
-      </a-plane>
+      <a-entity class="clickable" cursor-listener-animal-noise
+        alongpath="curve: #snakeTrack; loop: true; rotate: true; dur:60000" gltf-model="#snake" id="snakeModel"
+        scale="0.05 0.05 0.05" animation-mixer="clip: *;" position="0 1.5 0">
+      </a-entity>
+      <a-curve id="snakeTrack">
+        <a-curve-point id="curvePoint21" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint22" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint23" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint24" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint25" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint26" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint27" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint28" position="0 .5 0"></a-curve-point>
+        <a-curve-point id="curvePoint29" position="0 .5 0"></a-curve-point>
+      </a-curve>
+
     </a-entity>
 
 
