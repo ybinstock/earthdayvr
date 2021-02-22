@@ -199,6 +199,8 @@ const waterVideoArray = [{
   power: "water",
 }, ];
 
+
+
 AFRAME.registerComponent('cursor-listener-switch-earth-video', {
   init: function () {
     const videoAsset = document.querySelector('#AsmeretAsefawBerhe');
@@ -500,4 +502,19 @@ const changeTitleScreen = (index, power) => {
     sceneEl.appendChild(waterTitlePlane);
   }
 
+};
+
+const determineDevice = () => {
+  let device = null;
+  document.querySelector('a-scene').addEventListener('enter-vr', function () {
+    console.log("ENTERED VR");
+    device = 'vr_headset';
+  });
+
+  if (AFRAME.utils.isMobile()) {
+    device = 'phone';
+  }
+  if (!AFRAME.utils.checkHeadsetConnected()) {
+    device = 'desktop';
+  }
 };
