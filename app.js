@@ -1,7 +1,3 @@
-// fetch("./assets/data/earth.json")
-//   .then(response => response.json())
-//   .then(json => console.log(json));
-
 const earthVideoArray = [{
     title: "A climate change solution that's right under our feet",
     speaker: "Asmeret Asefaw Berhe",
@@ -133,7 +129,6 @@ const airVideoArray = [{
 ];
 
 const waterVideoArray = [{
-  title: "How a handful of fishing villages sparked a marine conservation revolution",
   speaker: "Alasdair Harris",
   path: "./assets/videos/water/AlasdairHarris.mp4 ",
   power: "water",
@@ -198,8 +193,6 @@ const waterVideoArray = [{
   path: "./assets/videos/water/TrionaMcGrath.mp4 ",
   power: "water",
 }, ];
-
-
 
 AFRAME.registerComponent('cursor-listener-switch-earth-video', {
   init: function () {

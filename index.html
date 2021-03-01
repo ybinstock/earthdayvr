@@ -2,24 +2,144 @@
 
 <head>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+  <!-- <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
   <script src="app.js"> </script>
 
+  <!-- A-frame dependencies -->
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
   <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js">
   </script>
   <script src="https://rawgit.com/atomicguy/aframe-fence-component/master/dist/aframe-fence-component.min.js"></script>
-
   <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js">
   </script>
+  <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.2/dist/aframe-preloader-component.min.js">
+  </script>
+
+  <!-- Other js dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=603bd5c14d1bac0012adeb96&product=inline-share-buttons"
+    async="async"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Bootstrap Bootswatch theme CSS - other themes available here: https://bootswatch.com -->
+  <link rel="stylesheet" href="./styles/bootswatch.css" />
+
+
 </head>
 
 <body>
-  <a-scene id="sceneComponent" fog="color:  #00f5f5;  far:  92;  density:  0"
-    gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;"
-    loading-screen="dotsColor: red; backgroundColor: black">
+  <div id="2D-UI">
+
+    <div class="data-menu-component" data-menu-component>
+      <input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="vh">
+      <label for="toggle" data-opens-menu>
+        &#x2630;
+        <span class="vh expanded-text">expanded</span>
+        <span class="vh collapsed-text">collapsed</span>
+      </label>
+      <div role="menu" data-menu-origin="left">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#instructions">Instructions</a></li>
+          <li><a href="#credits">Credits</a></li>
+          <li><a href="#takeaction">Take Action</a></li>
+          <li><a href="#share">Share</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="about" class="modaloverlay">
+      <div class="modal">
+        <a href="#close" class="close">&times;</a>
+        <div>
+          <h1>About</h1>
+          <p>Earth Day VR is built by <a href="http://yonibinstock.com/" target="_blank"> Yoni Binstock </a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="instructions" class="modaloverlay">
+      <div class="modal">
+        <a href="#close" class="close">&times;</a>
+        <div>
+          <h1>Instructions</h1>
+          <p>For Desktop VR: Use the WASD keys to move and your mouse to click</p>
+          <p>For Mobile VR: Teleport by XXX and tap to interact </p>
+          <p>For Headset VR: Teleport by XXX and use your controller to interact</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="credits" class="modaloverlay">
+      <div class="modal">
+        <a href="#close" class="close">&times;</a>
+        <div>
+          <h1>Credits</h1>
+          <p>To add when I get all the assets</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="takeaction" class="modaloverlay">
+      <div class="modal">
+        <a href="#close" class="close">&times;</a>
+        <div>
+          <h1>Take Action: Here are some ways you can help out for Earth Day</h1>
+          <p>Plant a tree</p>
+          <p>Carpool or change your transportation</p>
+          <p>Reduce your waste, reuse your materials, and recycle what you buy</p>
+          <p>Volunteer or donate for a local or national environmental organization</p>
+          <p>Write and call to your congressmen about climate change and the environment</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="share" class="modaloverlay">
+      <div class="modal">
+        <a href="#close" class="close">&times;</a>
+        <div>
+          <h1>Share the Experience</h1>
+          <div class="sharethis-inline-share-buttons"></div>
+          <!-- finish customizing share buttons when I get the url - https://platform.sharethis.com/inline-share-buttons -->
+        </div>
+      </div>
+    </div>
+
+    <div id="preloader-modal" class="modal instructions-modal" tabindex="-1" role="dialog" style="display: none;">
+      <div id="inside-box-loading-screen" class="modal-dialog modal-dialog__full" role="document">
+        <div class="modal-content vertical-align text-center">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="preloader-modal__spinner sk-spinner sk-rotating-plane" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="progress-label">Loading 0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <a-scene preloader="autoInject: false; clickToClose: false; autoClose: true; target: #preloader-modal; 
+    bar: #preloader-modal .progress-bar; label: #preloader-modal .progress-label; 
+    labelText: Loading {0}%; debug: true; doneLabelText: Done!; autoClose: true" id="sceneComponent"
+    fog="color:  #00f5f5;  far:  92;  density:  0;"
+    gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;">
 
     <a-assets>
       <img id="next-image" src="./assets/img/right-arrow.png">
@@ -59,72 +179,115 @@
       <audio id="snakeAudio" src="./assets/audioEffects/snake.mp3" preload="auto"></audio>
 
       <!-- earth videos -->
-      <video class="videoAsset" id="AsmeretAsefawBerhe" loop="true"
-        src="./assets/videos/earth/AsmeretAsefawBerhe.mp4"></video>
-      <video class="videoAsset" id="SuzanneSimard" loop="true" src="./assets/videos/earth/SuzanneSimard.mp4"></video>
-      <video class="videoAsset" id="GarthLenz" loop="true" src="./assets/videos/earth/GarthLenz.mp4"></video>
-      <video class="videoAsset" id="JoanneChory" loop="true" src="./assets/videos/earth/JoanneChory.mp4"></video>
-      <video class="videoAsset" id="JonathanDrori" loop="true" src="./assets/videos/earth/JonathanDrori.mp4"></video>
-      <video class="videoAsset" id="KarenLloyd" loop="true" src="./assets/videos/earth/KarenLloyd.mp4"></video>
-      <video class="videoAsset" id="KristieEbi" loop="true" src="./assets/videos/earth/KristieEbi.mp4"></video>
-      <video class="videoAsset" id="SamVanAken" loop="true" src="./assets/videos/earth/SamVanAken.mp4"></video>
-      <video class="videoAsset" id="TassoAzevedo" loop="true" src="./assets/videos/earth/TassoAzevedo.mp4"></video>
-      <video class="videoAsset" id="ThomasCrowther" loop="true" src="./assets/videos/earth/ThomasCrowther.mp4"></video>
-      <video class="videoAsset" id="TobyKiers" loop="true" src="./assets/videos/earth/TobyKiers.mp4"></video>
+      <video class="videoAsset" id="AsmeretAsefawBerhe" loop="true" src="./assets/videos/earth/AsmeretAsefawBerhe.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="SuzanneSimard" loop="true" src="./assets/videos/earth/SuzanneSimard.mp4"
+        preload="true" preload="true"></video>
+      <video class="videoAsset" id="GarthLenz" loop="true" src="./assets/videos/earth/GarthLenz.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="JoanneChory" loop="true" src="./assets/videos/earth/JoanneChory.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="JonathanDrori" loop="true" src="./assets/videos/earth/JonathanDrori.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="KarenLloyd" loop="true" src="./assets/videos/earth/KarenLloyd.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="KristieEbi" loop="true" src="./assets/videos/earth/KristieEbi.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="SamVanAken" loop="true" src="./assets/videos/earth/SamVanAken.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="TassoAzevedo" loop="true" src="./assets/videos/earth/TassoAzevedo.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="ThomasCrowther" loop="true" src="./assets/videos/earth/ThomasCrowther.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="TobyKiers" loop="true" src="./assets/videos/earth/TobyKiers.mp4"
+        preload="true"></video>
 
       <!-- air videos -->
-      <video class="videoAsset" id="ArunabhaGhosh" loop="true" src="./assets/videos/air/ArunabhaGhosh.mp4"></video>
-      <video class="videoAsset" id="BasSudmeijer" loop="true" src="./assets/videos/air/BasSudmeijer.mp4"></video>
-      <video class="videoAsset" id="DavidWallaceWells" loop="true"
-        src="./assets/videos/air/DavidWallaceWells.mp4"></video>
-      <video class="videoAsset" id="GavinSchmidt" loop="true" src="./assets/videos/air/GavinSchmidt.mp4"></video>
-      <video class="videoAsset" id="GregAsner" loop="true" src="./assets/videos/air/GregAsner.mp4"></video>
-      <video class="videoAsset" id="MariaNeira" loop="true" src="./assets/videos/air/MariaNeira.mp4"></video>
-      <video class="videoAsset" id="MaryEllenHannibal" loop="true"
-        src="./assets/videos/air/MaryEllenHannibal.mp4"></video>
-      <video class="videoAsset" id="SeanDavis" loop="true" src="./assets/videos/air/SeanDavis.mp4"></video>
-      <video class="videoAsset" id="TimKruger" loop="true" src="./assets/videos/air/TimKruger.mp4"></video>
-      <video class="videoAsset" id="WashingtonWachira" loop="true"
-        src="./assets/videos/air/WashingtonWachira.mp4"></video>
+      <video class="videoAsset" id="ArunabhaGhosh" loop="true" src="./assets/videos/air/ArunabhaGhosh.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="BasSudmeijer" loop="true" src="./assets/videos/air/BasSudmeijer.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="DavidWallaceWells" loop="true" src="./assets/videos/air/DavidWallaceWells.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="GavinSchmidt" loop="true" src="./assets/videos/air/GavinSchmidt.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="GregAsner" loop="true" src="./assets/videos/air/GregAsner.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="MariaNeira" loop="true" src="./assets/videos/air/MariaNeira.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="MaryEllenHannibal" loop="true" src="./assets/videos/air/MaryEllenHannibal.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="SeanDavis" loop="true" src="./assets/videos/air/SeanDavis.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="TimKruger" loop="true" src="./assets/videos/air/TimKruger.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="WashingtonWachira" loop="true" src="./assets/videos/air/WashingtonWachira.mp4"
+        preload="true"></video>
 
       <!-- water videos -->
-      <video class="videoAsset" id="AlasdairHarris" loop="true" src="./assets/videos/water/AlasdairHarris.mp4"></video>
-      <video class="videoAsset" id="AndrewForrest" loop="true" src="./assets/videos/water/AndrewForrest.mp4"></video>
-      <video class="videoAsset" id="AngelicqueWhite" loop="true"
-        src="./assets/videos/water/AngelicqueWhite.mp4"></video>
-      <video class="videoAsset" id="AntonioDonatoNobre" loop="true"
-        src="./assets/videos/water/AntonioDonatoNobre.mp4"></video>
+      <video class="videoAsset" id="AlasdairHarris" loop="true" src="./assets/videos/water/AlasdairHarris.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="AndrewForrest" loop="true" src="./assets/videos/water/AndrewForrest.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="AngelicqueWhite" loop="true" src="./assets/videos/water/AngelicqueWhite.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="AntonioDonatoNobre" loop="true" src="./assets/videos/water/AntonioDonatoNobre.mp4"
+        preload="true"></video>
       <video class="videoAsset" id="AyanaElizabethJohnson" loop="true"
-        src="./assets/videos/water/AyanaElizabethJohnson.mp4"></video>
-      <video class="videoAsset" id="EnricSala" loop="true" src="./assets/videos/water/EnricSala.mp4"></video>
-      <video class="videoAsset" id="JeremyJackson" loop="true" src="./assets/videos/water/JeremyJackson.mp4"></video>
-      <video class="videoAsset" id="KateStafford" loop="true" src="./assets/videos/water/KateStafford.mp4"></video>
-      <video class="videoAsset" id="LizHajek" loop="true" src="./assets/videos/water/LizHajek.mp4"></video>
-      <video class="videoAsset" id="NancyRabalais" loop="true" src="./assets/videos/water/NancyRabalais.mp4"></video>
-      <video class="videoAsset" id="RobHarmon" loop="true" src="./assets/videos/water/RobHarmon.mp4"></video>
-      <video class="videoAsset" id="TimFlannery" loop="true" src="./assets/videos/water/TimFlannery.mp4"></video>
-      <video class="videoAsset" id="TrionaMcGrath" loop="true" src="./assets/videos/water/TrionaMcGrath.mp4"></video>
+        src="./assets/videos/water/AyanaElizabethJohnson.mp4" preload="true"></video>
+      <video class="videoAsset" id="EnricSala" loop="true" src="./assets/videos/water/EnricSala.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="JeremyJackson" loop="true" src="./assets/videos/water/JeremyJackson.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="KateStafford" loop="true" src="./assets/videos/water/KateStafford.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="LizHajek" loop="true" src="./assets/videos/water/LizHajek.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="NancyRabalais" loop="true" src="./assets/videos/water/NancyRabalais.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="RobHarmon" loop="true" src="./assets/videos/water/RobHarmon.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="TimFlannery" loop="true" src="./assets/videos/water/TimFlannery.mp4"
+        preload="true"></video>
+      <video class="videoAsset" id="TrionaMcGrath" loop="true" src="./assets/videos/water/TrionaMcGrath.mp4"
+        preload="true"></video>
 
-      <a-asset-item id="plant13" src="./assets/models/plants/plant13/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant15" src="./assets/models/plants/plant15/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant17" src="./assets/models/plants/plant17/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant18" src="./assets/models/plants/plant18/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant22" src="./assets/models/plants/plant22/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant25" src="./assets/models/plants/plant25/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant27" src="./assets/models/plants/plant27/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant31" src="./assets/models/plants/plant31/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant32" src="./assets/models/plants/plant32/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="plant34" src="./assets/models/plants/plant34/modelDraco.gltf"></a-asset-item>
+      <a-asset-item id="plant13" src="./assets/models/plants/plant13/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant15" src="./assets/models/plants/plant15/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant17" src="./assets/models/plants/plant17/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant18" src="./assets/models/plants/plant18/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant22" src="./assets/models/plants/plant22/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant25" src="./assets/models/plants/plant25/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant27" src="./assets/models/plants/plant27/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant31" src="./assets/models/plants/plant31/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant32" src="./assets/models/plants/plant32/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="plant34" src="./assets/models/plants/plant34/modelDraco.gltf" preload="true"></a-asset-item>
 
-      <a-asset-item id="butterfly3" src="./assets/models/animals/butterfly3/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="blue_whale" src="./assets/models/animals/blue_whale/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="fish_animated" src="./assets/models/animals/fish_animated/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="frog1" src="./assets/models/animals/frog1/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="frog2" src="./assets/models/animals/frog2/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="killer_whale" src="./assets/models/animals/killer_whale/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="bird1" src="./assets/models/animals/bird1/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="bird2" src="./assets/models/animals/bird2/modelDraco.gltf"></a-asset-item>
-      <a-asset-item id="snake" src="./assets/models/animals/snake/modelDraco.gltf"></a-asset-item>
+      <a-asset-item id="greenSmallPlant" src="./assets/models/plants/greensmallplant/sceneDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="mushroomTree" src="./assets/models/plants/mushroom_tree/sceneDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="rainForestTree" src="./assets/models/plants/tree/sceneDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="oldTree" src="./assets/models/plants/old_tree/sceneDraco.gltf" preload="true"></a-asset-item>
+
+      <a-asset-item id="waterLily" src="./assets/models/plants/water_lily/sceneDraco.gltf" preload="true">
+      </a-asset-item>
+
+      <a-asset-item id="butterfly3" src="./assets/models/animals/butterfly3/modelDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="blue_whale" src="./assets/models/animals/blue_whale/modelDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="fish_animated" src="./assets/models/animals/fish_animated/modelDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="rainforestFrog" src="./assets/models/animals/frog1/modelDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="jumpingFrog" src="./assets/models/animals/frog2/modelDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="killer_whale" src="./assets/models/animals/killer_whale/modelDraco.gltf" preload="true">
+      </a-asset-item>
+      <a-asset-item id="bird1" src="./assets/models/animals/bird1/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="bird2" src="./assets/models/animals/bird2/modelDraco.gltf" preload="true"></a-asset-item>
+      <a-asset-item id="snake" src="./assets/models/animals/snake/modelDraco.gltf" preload="true"></a-asset-item>
 
     </a-assets>
 
@@ -180,8 +343,8 @@
 
     </a-entity>
 
-    <a-entity id="bottomLeftQuarter" position="-11.67676 -10 11"
-      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: linear; loop: NaN">
+    <a-entity id="bottomLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.5999999999999996 11"
+      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: easeInQuad; loop: NaN">
       <a-plane id="bottomLeftForestFloor" rotation="-90 0 0" position="0 0 0 "
         geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
           displacementMap: #forestFloor-displacement;
@@ -191,29 +354,53 @@
           roughnessMap: #forestFloor-rough;
         ">
       </a-plane>
-      <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#frog1" id="frog1Model" scale="0.3 0.3 0.3"
-        animation-mixer="clip: *;" position="5.64515 3.3662 -3.6706">
+      <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#rainForestFrog" id="rainForestFrogModel"
+        scale="1 1 0.3" animation-mixer="clip: *;" position="12.2183 3.469 -8.90804">
       </a-entity>
 
-      <a-entity gltf-model="#frog2" id="frog2Model" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
+      <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
+        animation-mixer="clip: *;" position="7.865 2.09364 -9.64312">
+      </a-entity>
+
+      <a-entity gltf-model="#greenSmallPlant" id="greenSmallPlantModel" scale="4 4 4"
+        position="3.56836 0.51236 -4.76309">
+      </a-entity>
+
+      <a-entity gltf-model="#mushroomTree" id="mushroomTreeModel" scale="0.01 0.01 0.01"
+        position="-5.28255 0.43786 3.18202">
+      </a-entity>
+
+      <a-entity gltf-model="#rainForestTree" id="rainForestTreeModel" scale="0.04 0.04 0.04"
+        position="1.75864 0.56058 10.22898">
+      </a-entity>
+
+      <a-entity gltf-model="#oldTree" id="oldTreeModel" scale="2 2 2" position="0 1.25294 -4.31001">
+      </a-entity>
+    </a-entity>
+
+    <a-entity id="bottomRightQuarter" scale="0.5 0.5 0.5" position="13.64479 -0.5999999999999996 11.06362"
+      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: easeInQuad; loop: NaN">
+
+      <a-entity gltf-model="#jumpingFrog" id="jumpingFrogModel" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
         position="0 0.7906 0">
       </a-entity>
 
-    </a-entity>
+      <a-cylinder id="pond" position="0 -6.37553 0" geometry="height: 20; radius: 15; height: 15" material="side: front;
+        opacity: 0.5;
+        color: blue">
+      </a-cylinder>
 
-    <a-entity id="bottomRightQuarter" position="13.64479 -0.5999999999999996 11.06362"
-      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: linear; loop: NaN">
-      <a-plane id="bottomRightForestFloor" rotation="-90 0 0" position="0 0 0"
-        geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
-          displacementMap: #forestFloor-displacement;
-          ambientOcclusionMap: #forestFloor-occlusion;
-          normalMap: #forestFloor-norm;
-          color: #forestFloor-color;
-          roughnessMap: #forestFloor-rough;
-          ">
-      </a-plane>
-      <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
-        animation-mixer="clip: *;" position="-5.88766 2.09364 0">
+      <a-entity gltf-model="#waterLily" id="waterLilyModel1" scale="0.007 0.007 0.007"
+        position="-5.28255 0.43786 3.18202">
+      </a-entity>
+      <a-entity gltf-model="#waterLily" id="waterLilyModel2" rotation="0 15 0" scale="0.004 0.004 0.004"
+        position="3.75231 0.43786 3.18202">
+      </a-entity>
+      <a-entity gltf-model="#waterLily" id="waterLilyModel3" rotation="0 25 0" scale="0.006 0.006 0.006"
+        position="0.39314 0.43786 -7.01233">
+      </a-entity>
+      <a-entity gltf-model="#waterLily" id="waterLilyModel4" rotation="0 40 0" scale="0.005 0.005 0.005"
+        position="-8.59917 0.43786 -7.45664">
       </a-entity>
 
       <!-- <a-entity gltf-model="#plant17" id="purpleFlower1" position="-5.61614 -1.2327 0" scale="2 2 2"></a-entity>
@@ -224,8 +411,8 @@
 
     </a-entity>
 
-    <a-entity id="topLeftQuarter" position="-11.67676 -0.5999999999999996 -14.57073"
-      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: linear; loop: NaN">
+    <a-entity id="topLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.5999999999999996 -14.57073"
+      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: easeInQuad; loop: NaN">
       <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
         material="side: front; 
   displacementMap: #forestFloor-displacement;
@@ -258,8 +445,8 @@
 
     </a-entity>
 
-    <a-entity id="topRightQuarter" position="13.45811 -0.6 -14.11624"
-      animation="property: position; to: 13.45811 -0.6 -14.11624; dur: 6000; easing: linear;">
+    <a-entity id="topRightQuarter" scale="0.5 0.5 0.5" position="13.45811 -0.6 -14.11624"
+      animation="property: position; to: 13.45811 -0.6 -14.11624; dur: 6000; easing: easeInQuad;">
 
       <a-plane id="topRightForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
         material="side: front; 
@@ -315,11 +502,7 @@
       <a-curve-point id="curvePoint38" position="4.38775 8.56695 0"></a-curve-point>
       <a-curve-point id="curvePoint39" position="0 8 0"></a-curve-point>
     </a-curve> -->
-
-
     </a-entity>
-
-
 
     <a-entity id="earthPlatform">
       <a-video id="earthVideo" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
@@ -387,8 +570,8 @@
       <a-entity light="type: ambient; intensity: 0.1; color: ##080808"></a-entity>
       <a-entity id="spotLight1" rotation="-90 0 0" position="10.93422 6.88767 7.85159"
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
-      <a-entity id="spotLight2" position="-11.18841 6 9.00754" rotation="-90 0 0"
-        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
+      <a-entity id="spotLight2" position="-12.99414 11.2045 12.73272" rotation="-90 0 0"
+        light="type: spot; angle: 45; intensity: 0.8"></a-entity>
       <a-entity id="spotLight3" position="-9.69237 6 -13.87181" rotation="-90 0 0"
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
       <a-entity id="spotLight4" position="12.33059 6 -12.81012" rotation="-90 0 0"
