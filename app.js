@@ -239,6 +239,7 @@ AFRAME.registerComponent('cursor-listener-switch-earth-video', {
 AFRAME.registerComponent('cursor-listener-play-earth-video', {
   init: function () {
     const videoAsset = document.querySelector('#AsmeretAsefawBerhe');
+    console.log('videoAsset', videoAsset);
     const earthPlayButton = document.getElementById('earthVideoPlayButton');
     videoAsset.load();
 
