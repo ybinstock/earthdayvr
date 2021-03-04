@@ -10,3 +10,5 @@ https://github.com/gladeye/aframe-preloader-component
 
 Converting a glTF to Draco glTF
 gltf-pipeline -i model.gltf -o modelDraco.gltf -d
+
+Current url is at https://ybinstock.github.io/earthdayvr/
