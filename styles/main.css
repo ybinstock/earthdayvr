@@ -167,3 +167,7 @@ label {
   top: 40%;
   margin: 0 auto;
 }
+
+#body {
+  opacity: 0;
+}

@@ -39,6 +39,9 @@
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
   </script>
 
+  <script src="./assets/shaders/water-shader.js"></script>
+
+
   <!-- styles -->
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -50,7 +53,7 @@
 
 </head>
 
-<body>
+<body id="body">
   <div id="2D-UI">
 
     <div class="data-menu-component" data-menu-component>
@@ -149,7 +152,8 @@
 
   </div>
 
-  <a-scene preloader="autoInject: false; clickToClose: false; autoClose: true; target: #preloader-modal; 
+  <a-scene loaded renderer="antialias: auto; colorManagement: true; sortObjects: true;
+    physicallyCorrectLights: true;maxCanvasWidth: 1920; maxCanvasHeight: 1920;" preloader="autoInject: false; clickToClose: false; autoClose: true; target: #preloader-modal; 
     bar: #preloader-modal .progress-bar; label: #preloader-modal .progress-label; 
     labelText: Loading {0}%; debug: true; doneLabelText: Done!; autoClose: true" id="sceneComponent"
     fog="color:  #00f5f5;  far:  92;  density:  0;"
@@ -191,6 +195,7 @@
       <audio id="whale1Audio" src="./assets/audioEffects/whale1.mp3" preload="auto"></audio>
       <audio id="whale2Audio" src="./assets/audioEffects/whale2.mp3" preload="auto"></audio>
       <audio id="snakeAudio" src="./assets/audioEffects/snake.mp3" preload="auto"></audio>
+      <audio id="paleBlueDotAudio" src="./assets/audioEffects/paleBlueDot.mp3" preload="auto"></audio>
 
       <!-- earth videos -->
       <video class="videoAsset" id="AsmeretAsefawBerhe" loop="true" src="./assets/videos/earth/AsmeretAsefawBerhe.mp4"
@@ -266,26 +271,29 @@
       <video class="videoAsset" id="TrionaMcGrath" loop="true" src="./assets/videos/water/TrionaMcGrath.mp4"
         preload="true"></video>
 
-      <a-asset-item id="plant13" src="./assets/models/plants/plant13/modelDraco.gltf" preload="true"></a-asset-item>
+      <!-- <a-asset-item id="plant13" src="./assets/models/plants/plant13/modelDraco.gltf" preload="true"></a-asset-item> -->
       <a-asset-item id="plant15" src="./assets/models/plants/plant15/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="plant17" src="./assets/models/plants/plant17/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="plant18" src="./assets/models/plants/plant18/modelDraco.gltf" preload="true"></a-asset-item>
+      <!-- <a-asset-item id="plant17" src="./assets/models/plants/plant17/modelDraco.gltf" preload="true"></a-asset-item> -->
+      <!-- <a-asset-item id="plant18" src="./assets/models/plants/plant18/modelDraco.gltf" preload="true"></a-asset-item> -->
       <a-asset-item id="plant22" src="./assets/models/plants/plant22/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="plant25" src="./assets/models/plants/plant25/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="plant27" src="./assets/models/plants/plant27/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="plant31" src="./assets/models/plants/plant31/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="plant32" src="./assets/models/plants/plant32/modelDraco.gltf" preload="true"></a-asset-item>
+      <!-- <a-asset-item id="plant25" src="./assets/models/plants/plant25/modelDraco.gltf" preload="true"></a-asset-item> -->
+      <!-- <a-asset-item id="plant27" src="./assets/models/plants/plant27/modelDraco.gltf" preload="true"></a-asset-item> -->
+      <!-- <a-asset-item id="plant31" src="./assets/models/plants/plant31/modelDraco.gltf" preload="true"></a-asset-item> -->
+      <!-- <a-asset-item id="plant32" src="./assets/models/plants/plant32/modelDraco.gltf" preload="true"></a-asset-item> -->
       <a-asset-item id="plant34" src="./assets/models/plants/plant34/modelDraco.gltf" preload="true"></a-asset-item>
 
-      <a-asset-item id="greenSmallPlant" src="./assets/models/plants/greensmallplant/sceneDraco.gltf" preload="true">
-      </a-asset-item>
-      <a-asset-item id="mushroomTree" src="./assets/models/plants/mushroom_tree/sceneDraco.gltf" preload="true">
-      </a-asset-item>
+
+      <!-- <a-asset-item id="greenSmallPlant" src="./assets/models/plants/greensmallplant/sceneDraco.gltf" preload="true">
+      </a-asset-item> -->
+      <!-- <a-asset-item id="mushroomTree" src="./assets/models/plants/mushroom_tree/sceneDraco.gltf" preload="true">
+      </a-asset-item> -->
       <a-asset-item id="rainForestTree" src="./assets/models/plants/tree/sceneDraco.gltf" preload="true"></a-asset-item>
       <a-asset-item id="oldTree" src="./assets/models/plants/old_tree/sceneDraco.gltf" preload="true"></a-asset-item>
 
       <a-asset-item id="waterLily" src="./assets/models/plants/water_lily/sceneDraco.gltf" preload="true">
       </a-asset-item>
+
+      <a-asset-item id="earth" src="./assets/models/other/earth/modelDraco.gltf" preload="true"></a-asset-item>
 
       <a-asset-item id="butterfly3" src="./assets/models/animals/butterfly3/modelDraco.gltf" preload="true">
       </a-asset-item>
@@ -373,21 +381,20 @@
       </a-entity>
 
       <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
-        animation-mixer="clip: *;" position="7.865 2.09364 -9.64312">
+        animation-mixer="clip: *;" position="4.16359 2.09364 -5.53069">
       </a-entity>
 
-      <a-entity gltf-model="#greenSmallPlant" id="greenSmallPlantModel" scale="4 4 4"
+      <!-- <a-entity gltf-model="#greenSmallPlant" id="greenSmallPlantModel" scale="4 4 4"
         position="3.56836 0.51236 -4.76309">
       </a-entity>
 
       <a-entity gltf-model="#mushroomTree" id="mushroomTreeModel" scale="0.01 0.01 0.01"
         position="-5.28255 0.43786 3.18202">
-      </a-entity>
+      </a-entity> -->
 
       <a-entity gltf-model="#rainForestTree" id="rainForestTreeModel" scale="0.04 0.04 0.04"
         position="1.75864 0.56058 10.22898">
       </a-entity>
-
       <a-entity gltf-model="#oldTree" id="oldTreeModel" scale="2 2 2" position="0 1.25294 -4.31001">
       </a-entity>
     </a-entity>
@@ -399,7 +406,7 @@
         position="0 0.7906 0">
       </a-entity>
 
-      <a-cylinder id="pond" position="0 -6.37553 0" geometry="height: 20; radius: 15; height: 15" material="side: front;
+      <a-cylinder id="pond" position="0 -0.59327 0" geometry="radius: 15; height: 2" material="side: front;
         opacity: 0.5;
         color: blue">
       </a-cylinder>
@@ -462,7 +469,7 @@
     <a-entity id="topRightQuarter" scale="0.5 0.5 0.5" position="13.45811 -0.6 -14.11624"
       animation="property: position; to: 13.45811 -0.6 -14.11624; dur: 6000; easing: easeInQuad;">
 
-      <a-plane id="topRightForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
+      <!-- <a-plane id="topRightForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
         material="side: front; 
         displacementMap: #forestFloor-displacement;
         ambientOcclusionMap: #forestFloor-occlusion;
@@ -470,34 +477,42 @@
         color: #forestFloor-color;
         roughnessMap: #forestFloor-rough;
         ">
-      </a-plane>
+      </a-plane> -->
 
-      <!-- <a-entity gltf-model="#plant13" id="desertflower" position="4.22604 0.74343 5.90179"></a-entity>
+      <a-entity class="clickable" cursor-listener-animal-noise
+        alongpath="curve: #snakeTrack; loop: true; rotate: true; dur:120000" gltf-model="#snake" id="snakeModel"
+        scale="0.05 0.05 0.05" animation-mixer="clip: *;" position="5.64175 1 -2.28372">
+      </a-entity>
+      <a-curve id="snakeTrack">
+        <a-curve-point id="curvePoint21" position="5.56173 1 -6.09953"></a-curve-point>
+        <a-curve-point id="curvePoint22" position="0 1 -6.03508"></a-curve-point>
+        <a-curve-point id="curvePoint23" position="-5.71331 1 -6.26834"></a-curve-point>
+        <a-curve-point id="curvePoint24" position="-6.03439 1 0"></a-curve-point>
+        <a-curve-point id="curvePoint25" position="-6.78361 1 5.9503"></a-curve-point>
+        <a-curve-point id="curvePoint26" position="-2.26983 1 5.43286"></a-curve-point>
+        <a-curve-point id="curvePoint27" position="5.83872 1 4.2928"></a-curve-point>
+        <a-curve-point id="curvePoint28" position="6.37761 1 -0.52614"></a-curve-point>
+        <a-curve-point id="curvePoint29" position="5.38958 1 -2.80747"></a-curve-point>
+      </a-curve>
+
+      <!-- <a-entity gltf-model="#plant13" id="desertflower" position="4.22604 0.74343 5.90179"></a-entity> -->
       <a-entity gltf-model="#plant15" id="boulderAndCactus" position="0 1.55923 -3.20791"></a-entity>
       <a-entity gltf-model="#plant22" id="desertScene" position="-0.35947 -0.25209 -1.06402" scale="0.014 0.025 0.017">
       </a-entity>
-      <a-entity gltf-model="#plant25" id="cactusBall" position="-6.62175 0.98995 -6.79465" scale="0.25 0.25 0.25">
-      </a-entity>
-      <a-entity gltf-model="#plant27" id="organCactus5MB" position="-3.33841 1.87811 3.50766" scale="0.5 0.5 0.5">
+      <!-- <a-entity gltf-model="#plant25" id="cactusBall" position="-6.62175 0.98995 -6.79465" scale="0.25 0.25 0.25">
       </a-entity> -->
+      <!-- <a-entity gltf-model="#plant27" id="organCactus5MB" position="-3.33841 1.87811 3.50766" scale="0.5 0.5 0.5">
+      </a-entity> -->
+
+    </a-entity>
+
+    <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#earth" rotation="0 0 0" id="earthModel"
+      scale="1 1 1" animation-mixer="clip: *;" position="1.96977 2.14081 -1.34987"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
     </a-entity>
 
 
-    <a-entity class="clickable" cursor-listener-animal-noise
-      alongpath="curve: #snakeTrack; loop: true; rotate: true; dur:120000" gltf-model="#snake" id="snakeModel"
-      scale="0.05 0.05 0.05" animation-mixer="clip: *;" position="5.64175 1 -2.28372">
-    </a-entity>
-    <a-curve id="snakeTrack">
-      <a-curve-point id="curvePoint21" position="5.56173 1 -6.09953"></a-curve-point>
-      <a-curve-point id="curvePoint22" position="0 1 -6.03508"></a-curve-point>
-      <a-curve-point id="curvePoint23" position="-5.71331 1 -6.26834"></a-curve-point>
-      <a-curve-point id="curvePoint24" position="-6.03439 1 0"></a-curve-point>
-      <a-curve-point id="curvePoint25" position="-6.78361 1 5.9503"></a-curve-point>
-      <a-curve-point id="curvePoint26" position="-2.26983 1 5.43286"></a-curve-point>
-      <a-curve-point id="curvePoint27" position="5.83872 1 4.2928"></a-curve-point>
-      <a-curve-point id="curvePoint28" position="6.37761 1 -0.52614"></a-curve-point>
-      <a-curve-point id="curvePoint29" position="5.38958 1 -2.80747"></a-curve-point>
-    </a-curve>
+
 
     <!-- not working -->
 

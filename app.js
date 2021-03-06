@@ -392,6 +392,7 @@ AFRAME.registerComponent('cursor-listener-animal-noise', {
     let audio = null;
     let currentElement = "";
     this.el.addEventListener('click', function (evt) {
+      console.log(' click happened')
       currentElement = evt.srcElement.id;
       if (currentElement === 'blue_whaleModel') {
         audio = document.querySelector("#whale1Audio");
@@ -404,6 +405,10 @@ AFRAME.registerComponent('cursor-listener-animal-noise', {
       }
       if (currentElement === 'snakeModel') {
         audio = document.querySelector("#snakeAudio");
+      }
+      if (currentElement === 'earthModel') {
+        console.log(' earth click')
+        audio = document.querySelector("#paleBlueDotAudio");
       }
       if (!playing) {
         audio.play();
@@ -512,3 +517,22 @@ const determineDevice = () => {
     device = 'desktop';
   }
 };
+
+
+// document.querySelector('a-scene').addEventListener('loaded', function () {
+//   console.log(' assets loaded')
+
+//   $('#body').animate({
+//     opacity: 0,
+//   }, 5000, function () {});
+// });
+
+AFRAME.registerComponent('loaded', {
+  init: function () {
+    console.log(' loaded in app js')
+
+    $('#body').animate({
+      opacity: 1,
+    }, 10000, function () {});
+  }
+});
