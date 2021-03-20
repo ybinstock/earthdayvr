@@ -1,3 +1,8 @@
+let animalNoisePlaying = false;
+let animalAudioSource = null;
+let videoAsset = null;
+let isVideoPlaying1 = false;
+
 const earthVideoArray = [{
     title: "A climate change solution that's right under our feet",
     speaker: "Asmeret Asefaw Berhe",
@@ -238,14 +243,13 @@ AFRAME.registerComponent('cursor-listener-switch-earth-video', {
 
 AFRAME.registerComponent('cursor-listener-play-earth-video', {
   init: function () {
-    const videoAsset = document.querySelector('#AsmeretAsefawBerhe');
-    console.log('videoAsset', videoAsset);
+    videoAsset = document.querySelector('#AsmeretAsefawBerhe');
     const earthPlayButton = document.getElementById('earthVideoPlayButton');
     videoAsset.load();
 
     this.el.addEventListener('click', function (evt) {
 
-      const isVideoPlaying1 = !!(videoAsset.currentTime > 0 && !videoAsset.paused && !videoAsset.ended && videoAsset.readyState > 2);
+      isVideoPlaying1 = !!(videoAsset.currentTime > 0 && !videoAsset.paused && !videoAsset.ended && videoAsset.readyState > 2);
 
       if (isVideoPlaying1) {
         videoAsset.pause();
@@ -253,170 +257,49 @@ AFRAME.registerComponent('cursor-listener-play-earth-video', {
       } else {
         videoAsset.play();
         earthPlayButton.setAttribute("visible", false);
+        isVideoPlaying1 = true;
+        if (animalNoisePlaying) {
+          animalAudioSource.pause();
+        }
       }
     });
   }
 });
 
-AFRAME.registerComponent('cursor-listener-switch-water-video', {
-  init: function () {
-    const videoAsset = document.querySelector('#AlasdairHarris');
-    const waterPlayButton = document.getElementById('waterVideoPlayButton');
-
-    let lastIndex = -1;
-    let title = "";
-    let speaker = "";
-    // console.log(' waterVideoArray.length', waterVideoArray.length)
-
-    this.el.addEventListener('click', function (evt) {
-      console.log(' inside water video switch component')
-
-      videoAsset.pause();
-      videoAsset.currentTime = 0;
-      lastIndex = (lastIndex + 1) % waterVideoArray.length;
-
-      if (lastIndex === 14) { // there are 13 speakers for water
-        lastIndex = -1;
-      }
-
-      title = waterVideoArray[lastIndex + 1].title;
-      speaker = waterVideoArray[lastIndex + 1].speaker;
-      console.log(' speaker', speaker)
-
-      let power = waterVideoArray[lastIndex + 1].power;
-      changeTitleScreen(lastIndex, power);
-
-      videoAsset.setAttribute('src', waterVideoArray[lastIndex + 1].path);
-      console.log('src', waterVideoArray[lastIndex + 1].path);
-
-      videoAsset.load();
-
-      const isVideoPlaying = !!(videoAsset.currentTime > 0 && !videoAsset.paused && !videoAsset.ended && videoAsset.readyState > 2);
-
-      if (!isVideoPlaying) { // if video is playing, 
-        waterPlayButton.setAttribute('visible', 'true');
-      } else if (isVideoPlaying) {
-        videoAsset.play();
-      }
-
-    });
-  }
-});
-
-AFRAME.registerComponent('cursor-listener-play-water-video', {
-  init: function () {
-    const videoAsset = document.querySelector('#AlasdairHarris');
-    const waterPlayButton = document.getElementById('waterVideoPlayButton');
-    videoAsset.load();
-
-    this.el.addEventListener('click', function (evt) {
-
-      const isVideoPlaying1 = !!(videoAsset.currentTime > 0 && !videoAsset.paused && !videoAsset.ended && videoAsset.readyState > 2);
-
-      if (isVideoPlaying1) {
-        videoAsset.pause();
-        waterPlayButton.setAttribute("visible", true);
-      } else {
-        videoAsset.play();
-        waterPlayButton.setAttribute("visible", false);
-      }
-    });
-  }
-});
-
-AFRAME.registerComponent('cursor-listener-switch-air-video', {
-  init: function () {
-    const videoAsset = document.querySelector('#ArunabhaGhosh');
-    const airPlayButton = document.getElementById('airVideoPlayButton');
-
-    let lastIndex = -1;
-    let title = "";
-    let speaker = "";
-
-    this.el.addEventListener('click', function (evt) {
-      console.log(' inside air video switch component', airVideoArray.length)
-
-      videoAsset.pause();
-      videoAsset.currentTime = 0;
-      lastIndex = (lastIndex + 1) % airVideoArray.length;
-
-      if (lastIndex === 10) { // there are 10 speakers for air
-        lastIndex = -1;
-      }
-      console.log('lastIndex', lastIndex);
-
-      let power = airVideoArray[lastIndex].power;
-      changeTitleScreen(lastIndex, power);
-      console.log(airVideoArray[lastIndex + 1].path, airVideoArray[lastIndex + 1].path)
-
-      videoAsset.setAttribute('src', airVideoArray[lastIndex + 1].path);
-      videoAsset.load();
-
-      const isVideoPlaying = !!(videoAsset.currentTime > 0 && !videoAsset.paused && !videoAsset.ended && videoAsset.readyState > 2);
-
-      if (!isVideoPlaying) { // if video is playing, 
-        airPlayButton.setAttribute('visible', 'true');
-      } else if (isVideoPlaying) {
-        videoAsset.play();
-      }
-
-    });
-  }
-});
-
-AFRAME.registerComponent('cursor-listener-play-air-video', {
-  init: function () {
-    const videoAsset = document.querySelector('#ArunabhaGhosh');
-    const airPlayButton = document.getElementById('airVideoPlayButton');
-    videoAsset.load();
-
-    this.el.addEventListener('click', function (evt) {
-      console.log(' should play air video')
-
-      const isVideoPlaying1 = !!(videoAsset.currentTime > 0 && !videoAsset.paused && !videoAsset.ended && videoAsset.readyState > 2);
-
-      if (isVideoPlaying1) {
-        videoAsset.pause();
-        airPlayButton.setAttribute("visible", true);
-      } else {
-        videoAsset.play();
-        airPlayButton.setAttribute("visible", false);
-      }
-    });
-  }
-});
 
 AFRAME.registerComponent('cursor-listener-animal-noise', {
   init: function () {
-    let playing = false;
-    let audio = null;
     let currentElement = "";
     this.el.addEventListener('click', function (evt) {
-      console.log(' click happened')
+      console.log(' click happened');
       currentElement = evt.srcElement.id;
       if (currentElement === 'blue_whaleModel') {
-        audio = document.querySelector("#whale1Audio");
+        animalAudioSource = document.querySelector("#whale1Audio");
       }
       if (currentElement === 'killer_whaleModel') {
-        audio = document.querySelector("#whale2Audio");
+        animalAudioSource = document.querySelector("#whale2Audio");
       }
       if (currentElement === 'frog1Model') {
-        audio = document.querySelector("#frogAudio");
+        animalAudioSource = document.querySelector("#frogAudio");
       }
       if (currentElement === 'snakeModel') {
-        audio = document.querySelector("#snakeAudio");
+        animalAudioSource = document.querySelector("#snakeAudio");
       }
       if (currentElement === 'earthModel') {
-        console.log(' earth click')
-        audio = document.querySelector("#paleBlueDotAudio");
+        console.log('earth click');
+        animalAudioSource = document.querySelector("#paleBlueDotAudio");
+        if (isVideoPlaying1) {
+          console.log(' video is playing and should be stopped')
+          videoAsset.pause();
+        }
       }
-      if (!playing) {
-        audio.play();
+      if (!animalNoisePlaying) {
+        animalAudioSource.play();
       } else {
-        audio.pause();
-        audio.currentTime = 0;
+        animalAudioSource.pause();
+        animalAudioSource.currentTime = 0;
       }
-      playing = !playing;
+      animalNoisePlaying = !animalNoisePlaying;
     });
   }
 });
@@ -503,34 +386,29 @@ const changeTitleScreen = (index, power) => {
 
 };
 
-const determineDevice = () => {
-  let device = null;
-  document.querySelector('a-scene').addEventListener('enter-vr', function () {
-    console.log("ENTERED VR");
-    device = 'vr_headset';
-  });
+AFRAME.registerComponent('determinedevice', {
+  init: function () {
+    let device = null;
+    document.querySelector('a-scene').addEventListener('enter-vr', function () {
+      console.log("ENTERED VR");
+      device = 'vr_headset';
+    });
 
-  if (AFRAME.utils.isMobile()) {
-    device = 'phone';
+    if (AFRAME.utils.device.isMobile() === true) {
+      device = 'phone';
+      const fullScreenMobileUI = document.getElementById("fullScreenMobileUI");
+      fullScreenMobileUI.style.display = "block";
+      // toggle UI visibility of a full screen image
+    }
+    if (!AFRAME.utils.device.checkHeadsetConnected()) {
+      device = 'desktop';
+      // not sure if this is right..
+    }
   }
-  if (!AFRAME.utils.checkHeadsetConnected()) {
-    device = 'desktop';
-  }
-};
-
-
-// document.querySelector('a-scene').addEventListener('loaded', function () {
-//   console.log(' assets loaded')
-
-//   $('#body').animate({
-//     opacity: 0,
-//   }, 5000, function () {});
-// });
+});
 
 AFRAME.registerComponent('loaded', {
   init: function () {
-    console.log(' loaded in app js')
-
     $('#body').animate({
       opacity: 1,
     }, 10000, function () {});

@@ -54,6 +54,9 @@
 </head>
 
 <body id="body">
+  <div id="fullScreenMobileUI">
+    <h1>Please visit this website on a desktop computer or a VR headset</h1>
+  </div>
   <div id="2D-UI">
 
     <div class="data-menu-component" data-menu-component>
@@ -70,6 +73,7 @@
           <li><a href="#credits">Credits</a></li>
           <li><a href="#takeaction">Take Action</a></li>
           <li><a href="#share">Share</a></li>
+          <li><a href="https://www.buymeacoffee.com/Yoni" target="_blank">Buy me a coffee</a></li>
         </ul>
       </div>
     </div>
@@ -90,8 +94,7 @@
         <div>
           <h1>Instructions</h1>
           <p>For Desktop VR: Use the WASD keys to move and your mouse to click</p>
-          <p>For Mobile VR: Teleport by XXX and tap to interact </p>
-          <p>For Headset VR: Teleport by XXX and use your controller to interact</p>
+          <p>For Headset VR: Move with your thumbstick and use your trigger to click</p>
         </div>
       </div>
     </div>
@@ -152,7 +155,7 @@
 
   </div>
 
-  <a-scene loaded renderer="antialias: auto; colorManagement: true; sortObjects: true;
+  <a-scene determinedevice loaded renderer="antialias: auto; colorManagement: true; sortObjects: true;
     physicallyCorrectLights: true;maxCanvasWidth: 1920; maxCanvasHeight: 1920;" preloader="autoInject: false; clickToClose: false; autoClose: true; target: #preloader-modal; 
     bar: #preloader-modal .progress-bar; label: #preloader-modal .progress-label; 
     labelText: Loading {0}%; debug: true; doneLabelText: Done!; autoClose: true" id="sceneComponent"
@@ -197,99 +200,30 @@
       <audio id="snakeAudio" src="./assets/audioEffects/snake.mp3" preload="auto"></audio>
       <audio id="paleBlueDotAudio" src="./assets/audioEffects/paleBlueDot.mp3" preload="auto"></audio>
 
-      <!-- earth videos -->
-      <video class="videoAsset" id="AsmeretAsefawBerhe" loop="true" src="./assets/videos/earth/AsmeretAsefawBerhe.mp4"
+      <!-- videos -->
+      <video class="videoAsset" id="AsmeretAsefawBerhe" loop="true"
+        src="./assets/videos/climatechange/AsmeretAsefawBerhe.mp4" preload="true"></video>
+      <video class="videoAsset" id="JoanneChory" loop="true" src="./assets/videos/climatechange/JoanneChory.mp4"
         preload="true"></video>
-      <video class="videoAsset" id="SuzanneSimard" loop="true" src="./assets/videos/earth/SuzanneSimard.mp4"
-        preload="true" preload="true"></video>
-      <video class="videoAsset" id="GarthLenz" loop="true" src="./assets/videos/earth/GarthLenz.mp4"
+      <video class="videoAsset" id="BasSudmeijer" loop="true" src="./assets/videos/climatechange/BasSudmeijer.mp4"
         preload="true"></video>
-      <video class="videoAsset" id="JoanneChory" loop="true" src="./assets/videos/earth/JoanneChory.mp4"
+      <video class="videoAsset" id="DavidWallaceWells" loop="true"
+        src="./assets/videos/climatechange/DavidWallaceWells.mp4" preload="true"></video>
+      <video class="videoAsset" id="GavinSchmidt" loop="true" src="./assets/videos/climatechange/GavinSchmidt.mp4"
         preload="true"></video>
-      <video class="videoAsset" id="JonathanDrori" loop="true" src="./assets/videos/earth/JonathanDrori.mp4"
+      <video class="videoAsset" id="SeanDavis" loop="true" src="./assets/videos/climatechange/SeanDavis.mp4"
         preload="true"></video>
-      <video class="videoAsset" id="KarenLloyd" loop="true" src="./assets/videos/earth/KarenLloyd.mp4"
+      <video class="videoAsset" id="TimKruger" loop="true" src="./assets/videos/climatechange/TimKruger.mp4"
         preload="true"></video>
-      <video class="videoAsset" id="KristieEbi" loop="true" src="./assets/videos/earth/KristieEbi.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="SamVanAken" loop="true" src="./assets/videos/earth/SamVanAken.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="TassoAzevedo" loop="true" src="./assets/videos/earth/TassoAzevedo.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="ThomasCrowther" loop="true" src="./assets/videos/earth/ThomasCrowther.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="TobyKiers" loop="true" src="./assets/videos/earth/TobyKiers.mp4"
+      <video class="videoAsset" id="TimFlannery" loop="true" src="./assets/videos/climatechange/TimFlannery.mp4"
         preload="true"></video>
 
-      <!-- air videos -->
-      <video class="videoAsset" id="ArunabhaGhosh" loop="true" src="./assets/videos/air/ArunabhaGhosh.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="BasSudmeijer" loop="true" src="./assets/videos/air/BasSudmeijer.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="DavidWallaceWells" loop="true" src="./assets/videos/air/DavidWallaceWells.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="GavinSchmidt" loop="true" src="./assets/videos/air/GavinSchmidt.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="GregAsner" loop="true" src="./assets/videos/air/GregAsner.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="MariaNeira" loop="true" src="./assets/videos/air/MariaNeira.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="MaryEllenHannibal" loop="true" src="./assets/videos/air/MaryEllenHannibal.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="SeanDavis" loop="true" src="./assets/videos/air/SeanDavis.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="TimKruger" loop="true" src="./assets/videos/air/TimKruger.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="WashingtonWachira" loop="true" src="./assets/videos/air/WashingtonWachira.mp4"
-        preload="true"></video>
-
-      <!-- water videos -->
-      <video class="videoAsset" id="AlasdairHarris" loop="true" src="./assets/videos/water/AlasdairHarris.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="AndrewForrest" loop="true" src="./assets/videos/water/AndrewForrest.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="AngelicqueWhite" loop="true" src="./assets/videos/water/AngelicqueWhite.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="AntonioDonatoNobre" loop="true" src="./assets/videos/water/AntonioDonatoNobre.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="AyanaElizabethJohnson" loop="true"
-        src="./assets/videos/water/AyanaElizabethJohnson.mp4" preload="true"></video>
-      <video class="videoAsset" id="EnricSala" loop="true" src="./assets/videos/water/EnricSala.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="JeremyJackson" loop="true" src="./assets/videos/water/JeremyJackson.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="KateStafford" loop="true" src="./assets/videos/water/KateStafford.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="LizHajek" loop="true" src="./assets/videos/water/LizHajek.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="NancyRabalais" loop="true" src="./assets/videos/water/NancyRabalais.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="RobHarmon" loop="true" src="./assets/videos/water/RobHarmon.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="TimFlannery" loop="true" src="./assets/videos/water/TimFlannery.mp4"
-        preload="true"></video>
-      <video class="videoAsset" id="TrionaMcGrath" loop="true" src="./assets/videos/water/TrionaMcGrath.mp4"
-        preload="true"></video>
-
-      <!-- <a-asset-item id="plant13" src="./assets/models/plants/plant13/modelDraco.gltf" preload="true"></a-asset-item> -->
+      <!-- 3d Assets -->
       <a-asset-item id="plant15" src="./assets/models/plants/plant15/modelDraco.gltf" preload="true"></a-asset-item>
-      <!-- <a-asset-item id="plant17" src="./assets/models/plants/plant17/modelDraco.gltf" preload="true"></a-asset-item> -->
-      <!-- <a-asset-item id="plant18" src="./assets/models/plants/plant18/modelDraco.gltf" preload="true"></a-asset-item> -->
       <a-asset-item id="plant22" src="./assets/models/plants/plant22/modelDraco.gltf" preload="true"></a-asset-item>
-      <!-- <a-asset-item id="plant25" src="./assets/models/plants/plant25/modelDraco.gltf" preload="true"></a-asset-item> -->
-      <!-- <a-asset-item id="plant27" src="./assets/models/plants/plant27/modelDraco.gltf" preload="true"></a-asset-item> -->
-      <!-- <a-asset-item id="plant31" src="./assets/models/plants/plant31/modelDraco.gltf" preload="true"></a-asset-item> -->
-      <!-- <a-asset-item id="plant32" src="./assets/models/plants/plant32/modelDraco.gltf" preload="true"></a-asset-item> -->
       <a-asset-item id="plant34" src="./assets/models/plants/plant34/modelDraco.gltf" preload="true"></a-asset-item>
-
-
-      <!-- <a-asset-item id="greenSmallPlant" src="./assets/models/plants/greensmallplant/sceneDraco.gltf" preload="true">
-      </a-asset-item> -->
-      <!-- <a-asset-item id="mushroomTree" src="./assets/models/plants/mushroom_tree/sceneDraco.gltf" preload="true">
-      </a-asset-item> -->
       <a-asset-item id="rainForestTree" src="./assets/models/plants/tree/sceneDraco.gltf" preload="true"></a-asset-item>
       <a-asset-item id="oldTree" src="./assets/models/plants/old_tree/sceneDraco.gltf" preload="true"></a-asset-item>
-
       <a-asset-item id="waterLily" src="./assets/models/plants/water_lily/sceneDraco.gltf" preload="true">
       </a-asset-item>
 
@@ -301,7 +235,7 @@
       </a-asset-item>
       <a-asset-item id="fish_animated" src="./assets/models/animals/fish_animated/modelDraco.gltf" preload="true">
       </a-asset-item>
-      <a-asset-item id="rainforestFrog" src="./assets/models/animals/frog1/modelDraco.gltf" preload="true">
+      <a-asset-item id="rainForestFrog" src="./assets/models/animals/frog1/modelDraco.gltf" preload="true">
       </a-asset-item>
       <a-asset-item id="jumpingFrog" src="./assets/models/animals/frog2/modelDraco.gltf" preload="true">
       </a-asset-item>
@@ -352,7 +286,7 @@
         scale="0.05 0.05 0.05" animation-mixer="clip: *;"
         position="13.569890978516664 6.489879222361612 18.223170496163007"> </a-entity>
       <a-curve id="blueWhaleTrack">
-        <a-curve-point id="curvePoint1" position="3.2179 4.60466 28.86556">"></a-curve-point>
+        <a-curve-point id="curvePoint1" position="3.2179 4.60466 28.86556"></a-curve-point>
         <a-curve-point id="curvePoint2" position="18.75928 1.15642 20.44267"></a-curve-point>
         <a-curve-point id="curvePoint3" position="28.04513 2.34389 4.66223"></a-curve-point>
         <a-curve-point id="curvePoint4" position="27.0901 3.01614 -19.88462"></a-curve-point>
@@ -360,7 +294,7 @@
         <a-curve-point id="curvePoint6" position="-12.49161 3.84326 -28.10261"></a-curve-point>
         <a-curve-point id="curvePoint7" position="-29.04753 2.73757 -4.2594"></a-curve-point>
         <a-curve-point id="curvePoint8" position="-21.60548 0.77163 19.91378"></a-curve-point>
-        <a-curve-point id="curvePoint9" position="-9.50764 1.60466 27.71959">"></a-curve-point>
+        <a-curve-point id="curvePoint9" position="-9.50764 1.60466 27.71959"></a-curve-point>
       </a-curve>
 
     </a-entity>
@@ -368,29 +302,20 @@
     <a-entity id="bottomLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.5999999999999996 11"
       animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: easeInQuad; loop: NaN">
       <a-plane id="bottomLeftForestFloor" rotation="-90 0 0" position="0 0 0 "
-        geometry="heigh5: 5; width: 15; height: 15" material="side: front; 
+        geometry="height: 5; width: 15; height: 15" material="side: front; 
           displacementMap: #forestFloor-displacement;
           ambientOcclusionMap: #forestFloor-occlusion;
           normalMap: #forestFloor-norm;
-          color: #forestFloor-color;
           roughnessMap: #forestFloor-rough;
         ">
       </a-plane>
-      <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#rainForestFrog" id="rainForestFrogModel"
-        scale="1 1 0.3" animation-mixer="clip: *;" position="12.2183 3.469 -8.90804">
+      <a-entity gltf-model="#rainForestFrog" class="clickable" cursor-listener-animal-noise id="rainForestFrogModel"
+        scale="1 1 1" animation-mixer="clip: *;" position="12.2183 3.469 -8.90804">
       </a-entity>
 
       <a-entity gltf-model="#butterfly3" rotation="0 180 0" id="butterfly3Model" scale="0.4 0.4 0.4"
         animation-mixer="clip: *;" position="4.16359 2.09364 -5.53069">
       </a-entity>
-
-      <!-- <a-entity gltf-model="#greenSmallPlant" id="greenSmallPlantModel" scale="4 4 4"
-        position="3.56836 0.51236 -4.76309">
-      </a-entity>
-
-      <a-entity gltf-model="#mushroomTree" id="mushroomTreeModel" scale="0.01 0.01 0.01"
-        position="-5.28255 0.43786 3.18202">
-      </a-entity> -->
 
       <a-entity gltf-model="#rainForestTree" id="rainForestTreeModel" scale="0.04 0.04 0.04"
         position="1.75864 0.56058 10.22898">
@@ -399,11 +324,11 @@
       </a-entity>
     </a-entity>
 
-    <a-entity id="bottomRightQuarter" scale="0.5 0.5 0.5" position="13.64479 -0.5999999999999996 11.06362"
+    <a-entity id="bottomRightQuarter" scale="0.5 0.5 0.5" position="13.64479 -0.6 11.06362"
       animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: easeInQuad; loop: NaN">
 
       <a-entity gltf-model="#jumpingFrog" id="jumpingFrogModel" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
-        position="0 0.7906 0">
+        position="3.78079 0.7906 2.58398">
       </a-entity>
 
       <a-cylinder id="pond" position="0 -0.59327 0" geometry="radius: 15; height: 2" material="side: front;
@@ -423,29 +348,49 @@
       <a-entity gltf-model="#waterLily" id="waterLilyModel4" rotation="0 40 0" scale="0.005 0.005 0.005"
         position="-8.59917 0.43786 -7.45664">
       </a-entity>
-
-      <!-- <a-entity gltf-model="#plant17" id="purpleFlower1" position="-5.61614 -1.2327 0" scale="2 2 2"></a-entity>
-      <a-entity gltf-model="#plant18" id="purpleFlower2" position="-7.55156 -4.2574 0" scale="5 5 5"></a-entity>
-      <a-entity gltf-model="#plant31" id="cherryBlossomTree5.8MB" position="2.88556 0 -3.35113" scale="0.5 0.5 0.5"></a-entity>
-      <a-entity gltf-model="#plant32" id="cherryBlossomTree7.5MB" rotation="0 -80 0" position="-4.90587 0 1.18451" scale="0.3 0.3 0.3"></a-entity> -->
-
-
     </a-entity>
 
-    <a-entity id="topLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.5999999999999996 -14.57073"
+    <a-entity id="topLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.6 -14.57073"
       animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: easeInQuad; loop: NaN">
-      <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="heigh5: 5; width: 15; height: 15"
+      <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="height: 5; width: 15; height: 15"
         material="side: front; 
-  displacementMap: #forestFloor-displacement;
-  ambientOcclusionMap: #forestFloor-occlusion;
-  normalMap: #forestFloor-norm;
-  color: #forestFloor-color;
-  roughnessMap: #forestFloor-rough;
-  ">
+          displacementMap: #forestFloor-displacement;
+          ambientOcclusionMap: #forestFloor-occlusion;
+          normalMap: #forestFloor-norm;
+          roughnessMap: #forestFloor-rough;
+          ">
       </a-plane>
 
+      <a-entity id="fireflies">
+        <a-sphere id="firefly1" material="transparent: true; opacity: .1; metalness: 1" geometry="radius: 0.1"
+          position="0 3.19923 6.49219">
+          <a-entity id="firefly1light" light="type: point; distance: 1; decay: .6"
+            animation="property: light.intensity; from: 0; to: 1; dur: 4000; easing: easeInQuad; dir: alternate; loop: 1000;">
+          </a-entity>
+        </a-sphere>
 
-      <a-entity gltf-model="#plant34" id="sequiaTree29.4MB" position="0 0 5.55719" scale="0.5 0.5 0.5"></a-entity>
+        <a-sphere id="firefly2" material="transparent: true; opacity: .1; metalness: 1" geometry="radius: 0.1"
+          position="4.61363 4.11476 -1.11029">
+          <a-entity id="firefly2light" light="type: point; distance: 1; decay: .6; intensity: 0.041"
+            animation="property: light.intensity; delay: 2000; from: 0; to: 1; dur: 4000; easing: easeInQuad; dir: alternate; loop: 1000;">
+          </a-entity>
+        </a-sphere>
+
+        <a-sphere id="firefly3" material="transparent: true; opacity: .1; metalness: 1" geometry="radius: 0.1"
+          position="-4.36629 5.13439 2.3052">
+          <a-entity id="firefly3light" light="type: point; distance: 1; decay: .6"
+            animation="property: light.intensity; delay: 1000; from: 0; to: 1; dur: 4000; easing: easeInQuad; dir: alternate; loop: 1000;">
+          </a-entity>
+        </a-sphere>
+
+      </a-entity>
+
+
+      <a-entity gltf-model="#plant34" id="sequiaTree1" position="0 0 5.55719" scale="1 1 1"></a-entity>
+      <a-entity gltf-model="#plant34" id="sequiaTree2" rotation="0 10 0" position="3.48348 0 -3.59487" scale="1 1 1">
+      </a-entity>
+      <a-entity gltf-model="#plant34" id="sequiaTree3" rotation="0 45 -0.01" position="-5.90425 0 3.79199"
+        scale="1 1 1"></a-entity>
 
 
       <!-- doesn't work -->
@@ -474,7 +419,6 @@
         displacementMap: #forestFloor-displacement;
         ambientOcclusionMap: #forestFloor-occlusion;
         normalMap: #forestFloor-norm;
-        color: #forestFloor-color;
         roughnessMap: #forestFloor-rough;
         ">
       </a-plane> -->
@@ -495,24 +439,16 @@
         <a-curve-point id="curvePoint29" position="5.38958 1 -2.80747"></a-curve-point>
       </a-curve>
 
-      <!-- <a-entity gltf-model="#plant13" id="desertflower" position="4.22604 0.74343 5.90179"></a-entity> -->
       <a-entity gltf-model="#plant15" id="boulderAndCactus" position="0 1.55923 -3.20791"></a-entity>
       <a-entity gltf-model="#plant22" id="desertScene" position="-0.35947 -0.25209 -1.06402" scale="0.014 0.025 0.017">
       </a-entity>
-      <!-- <a-entity gltf-model="#plant25" id="cactusBall" position="-6.62175 0.98995 -6.79465" scale="0.25 0.25 0.25">
-      </a-entity> -->
-      <!-- <a-entity gltf-model="#plant27" id="organCactus5MB" position="-3.33841 1.87811 3.50766" scale="0.5 0.5 0.5">
-      </a-entity> -->
 
     </a-entity>
 
     <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#earth" rotation="0 0 0" id="earthModel"
       scale="1 1 1" animation-mixer="clip: *;" position="1.96977 2.14081 -1.34987"
-      animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 80000">
     </a-entity>
-
-
-
 
     <!-- not working -->
 
@@ -538,44 +474,14 @@
         position="1.19087 5.69023 -24.31776">
       </a-video>
       <a-plane id="earthVideoNextButton" rotation="0 0 0" scale="1 1 1" class="clickable"
-        cursor-listener-switch-earth-video geometry="depth: 0.1" position="7.22202 3.05079 -24.31776"
+        cursor-listener-switch-earth-video position="7.22202 3.05079 -24.31776"
         material="shader: flat; src: #next-image; side: front"></a-plane>
       <a-plane id="earthVideoPlayButton" rotation="0 0 0" scale="2 2 1" class="clickable"
-        cursor-listener-play-earth-video geometry="depth: 0.1" position="1.6064 5.36242 -23.99353"
+        cursor-listener-play-earth-video position="1.6064 5.36242 -23.99353"
         material="shader: flat; src: #play-image; side: front">
       </a-plane>
-      <a-plane id="earthTitlePlane" scale="2 2 1" rotation="0 0 0" geometry="depth: 0.1; height: 1; width: 2"
+      <a-plane id="earthTitlePlane" scale="2 2 1" rotation="0 0 0" geometry="height: 1; width: 2"
         position="1.41834 1.12485 -24.31776" material="shader: flat; src: #earth-title-Screen; side: front"></a-plane>
-    </a-entity>
-
-    <a-entity id="airPlatform">
-      <a-video id="airVideo" scale="3 3 1" rotation="0 90 0" src="#ArunabhaGhosh" class="video" width="3" height="1.5"
-        position="-22.1295 4.32515 -0.9734"></a-video>
-      <a-plane id="airVideoNextButton" rotation="0 90 0" class="clickable" cursor-listener-switch-air-video
-        geometry="depth: 0.1" position="-22.1295 1.15783 -4.90015"
-        material="shader: flat; src: #next-image; side: front">
-      </a-plane>
-      <a-plane id="airVideoPlayButton" rotation="0 90 0" class="clickable" cursor-listener-play-air-video
-        geometry="depth: 0.1" position="-21.54032 5.3 -1.30243" material="shader: flat; src: #play-image; side: front">
-      </a-plane>
-      <a-plane id="airTitlePlane" scale="2 2 1" rotation="0 90 0" geometry="depth: 0.1; height: 1; width: 2"
-        position="-21.814 1.10417 -1.3383" material="shader: flat; src: #air-title-Screen; side: front"></a-plane>
-    </a-entity>
-
-    <a-entity id="waterPlatform">
-      <a-video id="waterVideo" scale="3 3 1" rotation="0 -90 0" src="#AlasdairHarris" class="video" width="3"
-        height="1.5" position="23.64822 4.462 -0.62314">
-      </a-video>
-      <a-plane id="waterVideoNextButton" rotation="0 -90 0" class="clickable" cursor-listener-switch-water-video
-        geometry="depth: 0.1" position="23.64822 1.21924 2.73143"
-        material="shader: flat; src: #next-image; side: front">
-      </a-plane>
-      <a-plane id="waterVideoPlayButton" rotation="0 -90 0" class="clickable" cursor-listener-play-water-video
-        geometry="depth: 0.1" position="21.84742 4.2233 -0.80972"
-        material="shader: flat; src: #play-image; side: front">
-      </a-plane>
-      <a-plane id="waterTitlePlane" scale="2 2 1" rotation="0 -90 0" geometry="depth: 0.1; height: 1; width: 2"
-        position="23.56772 1.20063 -0.66655" material="shader: flat; src: #water-title-Screen; side: front"></a-plane>
     </a-entity>
 
     <a-entity id="pathway">
@@ -590,13 +496,16 @@
     </a-entity>
 
     <a-sky id="sky" color="#ECECEC"></a-sky>
-    <a-camera dynamic-body collider-check position="0 1.7 16">
-      <a-cursor raycaster="objects: .clickable"></a-cursor>
-    </a-camera>
-    <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 5"></a-entity>
+    <a-entity laser-controls raycaster="objects: .clickable; far: 5; lineColor: red; lineOpacity: 0.2"></a-entity>
+    <a-entity movement-controls="fly: false; speed: 0.1" position="0 1 16">
+      <a-camera dynamic-body collider-check>
+        <a-cursor raycaster="objects: .clickable"></a-cursor>
+      </a-camera>
+    </a-entity>
+    <a-entity laser-controls="hand: right" raycaster="objects: .clickable; far: 5"></a-entity>
 
     <a-entity id="lights">
-      <a-entity light="type: ambient; intensity: 0.1; color: ##080808"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.1; color: #080808"></a-entity>
       <a-entity id="spotLight1" rotation="-90 0 0" position="10.93422 6.88767 7.85159"
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
       <a-entity id="spotLight2" position="-12.99414 11.2045 12.73272" rotation="-90 0 0"
@@ -605,6 +514,8 @@
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
       <a-entity id="spotLight4" position="12.33059 6 -12.81012" rotation="-90 0 0"
         light="type: spot; angle: 45; intensity: 0.4"></a-entity>
+
+
     </a-entity>
 
     <a-entity id="boundary">
@@ -617,7 +528,6 @@
         displacementMap: #water-displacement;
         ambientOcclusionMap: #water-occlusion;
         normalMap: #water-norm;
-        color: #water-color;
         ">
       </a-sphere>
     </a-entity>
