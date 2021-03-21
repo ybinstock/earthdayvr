@@ -202,7 +202,7 @@ const waterVideoArray = [{
 AFRAME.registerComponent('cursor-listener-switch-earth-video', {
   init: function () {
     const videoAsset = document.querySelector('#AsmeretAsefawBerhe');
-    const earthPlayButton = document.getElementById('earthVideoPlayButton');
+    const earthPlayButton = document.getElementById('videoPlayButton');
 
     let lastIndex = -1;
     let title = "";
@@ -213,10 +213,7 @@ AFRAME.registerComponent('cursor-listener-switch-earth-video', {
       videoAsset.currentTime = 0;
       lastIndex = (lastIndex + 1) % earthVideoArray.length;
 
-      console.log(' earthVideoArray[lastIndex]', earthVideoArray[lastIndex]);
-      console.log('lastIndex', lastIndex)
-
-      if (lastIndex === 10) { // there are 10 speakers for earth
+      if (lastIndex === 8) { // there are 8 speakers for earth
         lastIndex = -1;
       }
 
@@ -266,7 +263,6 @@ AFRAME.registerComponent('cursor-listener-play-earth-video', {
   }
 });
 
-
 AFRAME.registerComponent('cursor-listener-animal-noise', {
   init: function () {
     let currentElement = "";
@@ -306,7 +302,7 @@ AFRAME.registerComponent('cursor-listener-animal-noise', {
 
 const changeTitleScreen = (index, power) => {
   if (power === 'earth') {
-    if (index === 10) { // there are 10 speakers for earth
+    if (index === 8) { // there are 8 speakers
       index = 0;
     }
     const earthTitlePlaneOld = document.getElementById('earthTitlePlane'); // find the current earth title plane
@@ -319,11 +315,11 @@ const changeTitleScreen = (index, power) => {
     earthTitleScreen.setAttribute("src", titleImagePathEarthVideo);
 
     const earthTitlePlane = document.createElement('a-plane'); // create plane
-    earthTitlePlane.setAttribute("id", "earthTitlePlane");
+    earthTitlePlane.setAttribute("id", "titlePlane");
     earthTitlePlane.setAttribute('height', '1');
     earthTitlePlane.setAttribute('width', '2');
     earthTitlePlane.setAttribute('depth', '.01');
-    earthTitlePlane.setAttribute('position', '1.41834 2.91893 -24.31776');
+    earthTitlePlane.setAttribute('position', '1.41834 1.12485 -22.21711');
     earthTitlePlane.setAttribute('rotation', '0 0 0');
     earthTitlePlane.setAttribute('scale', '2 2 1');
 

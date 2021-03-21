@@ -222,7 +222,7 @@
       <a-asset-item id="plant15" src="./assets/models/plants/plant15/modelDraco.gltf" preload="true"></a-asset-item>
       <a-asset-item id="plant22" src="./assets/models/plants/plant22/modelDraco.gltf" preload="true"></a-asset-item>
       <a-asset-item id="plant34" src="./assets/models/plants/plant34/modelDraco.gltf" preload="true"></a-asset-item>
-      <a-asset-item id="rainForestTree" src="./assets/models/plants/tree/sceneDraco.gltf" preload="true"></a-asset-item>
+      <!-- <a-asset-item id="rainForestTree" src="./assets/models/plants/tree/sceneDraco.gltf" preload="true"></a-asset-item> -->
       <a-asset-item id="oldTree" src="./assets/models/plants/old_tree/sceneDraco.gltf" preload="true"></a-asset-item>
       <a-asset-item id="waterLily" src="./assets/models/plants/water_lily/sceneDraco.gltf" preload="true">
       </a-asset-item>
@@ -300,13 +300,13 @@
     </a-entity>
 
     <a-entity id="bottomLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.5999999999999996 11"
-      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: easeInQuad; loop: NaN">
+      animation="property: position; to: -11.67676 -.6 11; dur: 6000; easing: easeInQuad;">
       <a-plane id="bottomLeftForestFloor" rotation="-90 0 0" position="0 0 0 "
         geometry="height: 5; width: 15; height: 15" material="side: front; 
           displacementMap: #forestFloor-displacement;
           ambientOcclusionMap: #forestFloor-occlusion;
           normalMap: #forestFloor-norm;
-          roughnessMap: #forestFloor-rough;
+          roughnessMap: #forestFloor-rough;          
         ">
       </a-plane>
       <a-entity gltf-model="#rainForestFrog" class="clickable" cursor-listener-animal-noise id="rainForestFrogModel"
@@ -317,15 +317,15 @@
         animation-mixer="clip: *;" position="4.16359 2.09364 -5.53069">
       </a-entity>
 
-      <a-entity gltf-model="#rainForestTree" id="rainForestTreeModel" scale="0.04 0.04 0.04"
+      <!-- <a-entity gltf-model="#rainForestTree" id="rainForestTreeModel" scale="0.04 0.04 0.04"
         position="1.75864 0.56058 10.22898">
-      </a-entity>
+      </a-entity> -->
       <a-entity gltf-model="#oldTree" id="oldTreeModel" scale="2 2 2" position="0 1.25294 -4.31001">
       </a-entity>
     </a-entity>
 
     <a-entity id="bottomRightQuarter" scale="0.5 0.5 0.5" position="13.64479 -0.6 11.06362"
-      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: easeInQuad; loop: NaN">
+      animation="property: position; to: 13.64479 -0.6 11.06362; dur: 6000; easing: easeInQuad;">
 
       <a-entity gltf-model="#jumpingFrog" id="jumpingFrogModel" scale="0.1 0.1 0.1" animation-mixer="clip: *;"
         position="3.78079 0.7906 2.58398">
@@ -351,7 +351,7 @@
     </a-entity>
 
     <a-entity id="topLeftQuarter" scale="0.5 0.5 0.5" position="-11.67676 -0.6 -14.57073"
-      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: easeInQuad; loop: NaN">
+      animation="property: position; to: -11.67676 -0.6 -14.57073; dur: 6000; easing: easeInQuad;">
       <a-plane id="topLeftForestFloor" rotation="-90 0 0" position="0 0 0" geometry="height: 5; width: 15; height: 15"
         material="side: front; 
           displacementMap: #forestFloor-displacement;
@@ -439,15 +439,15 @@
         <a-curve-point id="curvePoint29" position="5.38958 1 -2.80747"></a-curve-point>
       </a-curve>
 
-      <a-entity gltf-model="#plant15" id="boulderAndCactus" position="0 1.55923 -3.20791"></a-entity>
-      <a-entity gltf-model="#plant22" id="desertScene" position="-0.35947 -0.25209 -1.06402" scale="0.014 0.025 0.017">
+      <a-entity gltf-model="#plant15" id="boulderAndCactus" scale="2 2 1" position="0 2.65692 -2.7569"></a-entity>
+      <a-entity gltf-model="#plant22" id="desertScene" position="5.35169 -0.25209 -5.81128" scale="0.03 0.03 0.03">
       </a-entity>
 
     </a-entity>
 
-    <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#earth" rotation="0 0 0" id="earthModel"
-      scale="1 1 1" animation-mixer="clip: *;" position="1.96977 2.14081 -1.34987"
-      animation="property: rotation; to: 0 360 0; loop: true; dur: 80000">
+    <a-entity class="clickable" cursor-listener-animal-noise gltf-model="#earth" rotation="0 80.85568547536431 0"
+      id="earthModel" scale="2 2 2" animation-mixer="clip: *;" position="-21.78543 2.28173 -1.34987"
+      animation="property: rotation; to: 0 360 0; loop: 1000; dur: 80000">
     </a-entity>
 
     <!-- not working -->
@@ -469,19 +469,17 @@
     </a-curve> -->
     </a-entity>
 
-    <a-entity id="earthPlatform">
-      <a-video id="earthVideo" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
-        position="1.19087 5.69023 -24.31776">
+    <a-entity id="videoPlatform">
+      <a-video id="videoPlayer" scale="3 3 1" src="#AsmeretAsefawBerhe" class="video" width="3" height="1"
+        position="1.19087 3.75294 -22.42601">
       </a-video>
-      <a-plane id="earthVideoNextButton" rotation="0 0 0" scale="1 1 1" class="clickable"
-        cursor-listener-switch-earth-video position="7.22202 3.05079 -24.31776"
-        material="shader: flat; src: #next-image; side: front"></a-plane>
-      <a-plane id="earthVideoPlayButton" rotation="0 0 0" scale="2 2 1" class="clickable"
-        cursor-listener-play-earth-video position="1.6064 5.36242 -23.99353"
-        material="shader: flat; src: #play-image; side: front">
+      <a-plane id="videoNextButton" rotation="0 0 0" scale="1 1 1" class="clickable" cursor-listener-switch-earth-video
+        position="7.22202 3.35527 -22.60402" material="shader: flat; src: #next-image; side: front"></a-plane>
+      <a-plane id="videoPlayButton" rotation="0 0 0" scale="2 2 1" class="clickable" cursor-listener-play-earth-video
+        position="1.6064 3.80236 -22" material="shader: flat; src: #play-image; side: front">
       </a-plane>
-      <a-plane id="earthTitlePlane" scale="2 2 1" rotation="0 0 0" geometry="height: 1; width: 2"
-        position="1.41834 1.12485 -24.31776" material="shader: flat; src: #earth-title-Screen; side: front"></a-plane>
+      <a-plane id="titlePlane" scale="2 2 1" rotation="0 0 0" geometry="height: 1; width: 2"
+        position="1.41834 1.12485 -22.21711" material="shader: flat; src: #earth-title-Screen; side: front"></a-plane>
     </a-entity>
 
     <a-entity id="pathway">
@@ -506,16 +504,16 @@
 
     <a-entity id="lights">
       <a-entity light="type: ambient; intensity: 0.1; color: #080808"></a-entity>
-      <a-entity id="spotLight1" rotation="-90 0 0" position="10.93422 6.88767 7.85159"
-        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
-      <a-entity id="spotLight2" position="-12.99414 11.2045 12.73272" rotation="-90 0 0"
-        light="type: spot; angle: 45; intensity: 0.8"></a-entity>
-      <a-entity id="spotLight3" position="-9.69237 6 -13.87181" rotation="-90 0 0"
-        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
-      <a-entity id="spotLight4" position="12.33059 6 -12.81012" rotation="-90 0 0"
-        light="type: spot; angle: 45; intensity: 0.4"></a-entity>
-
-
+      <a-entity id="spotLight1" rotation="-90 0 0" position="15.13527 7.70935 10.72155"
+        light="type: spot; angle: 45; intensity: 0.4; decay: 0"></a-entity>
+      <a-entity id="spotLight2" position="-11.79735 6.44201 10.94593" rotation="-90 0 0"
+        light="type: spot; angle: 40; intensity: 1; distance: 10; decay: 0"></a-entity>
+      <a-entity id="spotLight3" position="-15.0972 9.89695 -16.2347" rotation="-90 0 0"
+        light="type: spot; angle: 45; intensity: 1; distance: 10; decay: 0"></a-entity>
+      <a-entity id="spotLight4" position="12.91961 5.12312 -14.63581" rotation="-90 0 0"
+        light="type: spot; angle: 40; intensity: 1; distance: 8; decay: 0"></a-entity>
+      <a-entity id="earthLight" position="-14.47843 2.18931 -1.44551" rotation="0 90 0"
+        light="type: spot; angle: 30; intensity: 1; distance: 10; decay: 0"></a-entity>
     </a-entity>
 
     <a-entity id="boundary">
